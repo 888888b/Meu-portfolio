@@ -27,7 +27,7 @@ function Main(){
         </div>
 
         <div id="div-sobre-img">
-          <img src="../src/images/img-dev.jpg"/>
+          <img src="/src/images/img-dev.jpg"/>
         </div>
         
       </div>
