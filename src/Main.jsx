@@ -1,4 +1,4 @@
-
+import imgDev from "../src/images/img-dev.jpg";
 
 function Main(){
   return(
@@ -27,7 +27,7 @@ function Main(){
         </div>
 
         <div id="div-sobre-img">
-          <img src="/images/img-dev.jpg"/>
+          <img src={imgDev}/>
         </div>
         
       </div>
