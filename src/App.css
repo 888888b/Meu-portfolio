@@ -30,7 +30,7 @@ body{
 }
 
 .header-container h1{
-  font: 600 2.5em arial, sans-serif;
+  font: 600 2.3em arial, sans-serif;
   background: linear-gradient(to right, #FB7E12, #E02352);
   -webkit-background-clip: text;
   color: transparent;
@@ -44,8 +44,13 @@ body{
 }
 
 .container-links a{
-  font-size: 2.2em;
+  font-size: 2em;
   color: white;
+  transition: transform .2s ease-in-out;
+}
+
+.container-links a:hover{
+  transform: scale(1.1);
 }
 
 .main-container{
@@ -72,14 +77,15 @@ body{
   width: 60%;
   display: flex;
   padding: 60px 20px;
-  align-items: flex-start;
   flex-direction: column;
+  align-items:flex-start;
+  justify-content: center;
   row-gap: 1.6rem;
   box-sizing: border-box;
 }
 
 #div-titulo-text h2{
-  font: 500 1.7em arial, sans-serif;
+  font: 500 1.6em arial, sans-serif;
   color: white;
 }
 
@@ -89,7 +95,7 @@ span{
 }
 
 #div-titulo-text h1{
-  font: 600 3.9em arial, sans-serif;
+  font: 600 3.8em arial, sans-serif;
   background: linear-gradient(to right, #FB7E12, #E02352);
   -webkit-background-clip: text;
   color: transparent;
@@ -100,7 +106,7 @@ span{
   padding: 10px 30px;
   background: linear-gradient(to right, #FB7E12, #E02352);
   border: none;
-  font: 600 2em arial, sans-serif;
+  font: 600 1.9em arial, sans-serif;
   color: white;
   border-radius: 5px;
   margin-top: 20px;
@@ -108,7 +114,7 @@ span{
 }
 
 #div-titulo-text a:hover{
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 #div-titulo-img{
@@ -121,20 +127,23 @@ span{
 }
 
 #img-div{
-  width: 250px;
-  height: 250px;
+  width: 270px;
+  height: 270px;
   transform: rotate(45deg);
   background-color: black;
   display: flex;
   justify-content: center;
   align-items: center;
+  box-sizing: border-box;
   overflow: hidden;
+  box-shadow: 1px 1px 10px rgb(255, 255, 255, .1);
 }
 
 #img-div img{
-  width: 100%;
-  height: 100%;
+  width: 130%;
+  height: 130%;
   transform: rotate(-45deg);
+  object-fit: cover;
 }
 
 .div-sobre{
@@ -158,7 +167,7 @@ span{
 }
 
 #div-sobre-text h2{
-  font: 600 2em arial, sans-serif;
+  font: 600 1.8em arial, sans-serif;
   color:#F28E12;
 }
 
@@ -169,7 +178,7 @@ span{
 
 #div-sobre-text p{
   max-width: 90%;
-  font-size: 1.4em;
+  font-size: 1.3em;
   font-weight: 500;
   font-family: "Open Sans", sans-serif;
   color: white;
@@ -193,7 +202,7 @@ span{
   flex-direction: column;
   padding: 30px 0px;
   border-radius: 5px;
-  row-gap: 1rem;
+  row-gap: 2rem;
   background-image: linear-gradient(to right, rgb(255,255,255, 0.15), rgb(255, 255, 255, 0.1), rgb(255, 255, 255, 0.1));
 }
 
@@ -201,7 +210,7 @@ span{
 .experiencia-titulo h2{
   color: #F28E12;
   text-align: center;
-  font: 600 1.9em arial, sans-serif;
+  font: 600 1.8em arial, sans-serif;
 }
 
 .experiencia-divs{
@@ -226,11 +235,13 @@ span{
 
 .experiencia-text h1{
   max-width: 90%;
-  font: 600 2.9em arial, sans-serif;
+  font: 600 2.4em arial, sans-serif;
   color: white;
+  line-height: 150%;
 }
 
 .experiencia-text h1 span{
+  font-size: 1.3em;
   color: #F28E12;
 }
 
@@ -281,15 +292,30 @@ span{
   padding: 30px 0px;
   border-radius: 5px;
   display: flex;
-  row-gap: 6rem;
+  row-gap: 4rem;
   flex-direction: column;
   background-image: linear-gradient(to right, rgb(255,255,255, 0.15), rgb(255, 255, 255, 0.1), rgb(255, 255, 255, 0.1));
+}
+
+.portifolio-titulo{
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
 }
 
 .portifolio-titulo h2{
   color: #F28E12;
   text-align: center;
   font: 600 1.9em arial, sans-serif;
+}
+
+.portifolio-titulo h1{
+  background-image: linear-gradient(to right, #FB7E12, #bf2249);
+  -webkit-background-clip: text;
+  text-align: center;
+  color: transparent;
+  font: 600 3.5em arial, sans-serif;
+  text-transform: uppercase;
 }
 
 .div-projetos{
@@ -377,12 +403,12 @@ footer{
 footer p{
   background: linear-gradient(to right, #FB7E12, #E02352);
   -webkit-background-clip: text;
-  font: 600 2.5em arial, sans-serif;
+  font: 600 2.3em arial, sans-serif;
   color: transparent;
 }
 
 #footer-icons a{
-  font-size: 2.5em;
+  font-size: 2.3em;
 }
 
 

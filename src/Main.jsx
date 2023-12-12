@@ -1,4 +1,5 @@
 import imgDev from "../src/images/img-dev.jpg";
+import imgPerfil from "../src/images/foto-perfil.png";
 
 function Main(){
   return(
@@ -13,7 +14,7 @@ function Main(){
         
         <div className="divs-titulo" id="div-titulo-img">
           <div id="img-div">
-            <img src="https://i.pinimg.com/originals/51/20/1d/51201dde76e237887b72e439ba68bf47.jpg"/>
+            <img src={imgPerfil}/>
           </div>
         </div>
         
@@ -55,6 +56,7 @@ function Main(){
       <div className="portifolio">
         <div className="portifolio-titulo">
           <h2>Meu Portifolio</h2>
+          <h1>projetos</h1>
         </div>
 
         <div className="div-projetos">
