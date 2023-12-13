@@ -52,63 +52,6 @@ function Main(){
           </div>
         </div>
       </div>
-
-      <div className="portifolio">
-        <div className="portifolio-titulo">
-          <h2>Meu Portifolio</h2>
-          <h1>projetos</h1>
-        </div>
-
-        <div className="div-projetos">
-          <div className="projetos" id="projeto-1">
-            <div className="projetos-img">
-              <iframe src="https://888888b.github.io/Pagina_Login/"/>
-            </div>
-            <div className="projetos-text">
-              <a className="a-github"  href="https://github.com/888888b/Pagina_Login" target="_blank"
->Github</a>
-              <a href="https://888888b.github.io/Pagina_Login/"  className="a-deploy" target="_blank"
->Deploy</a>
-            </div>
-          </div>
-            
-          <div className="projetos" id="projeto-2">
-            <div className="projetos-img">
-              <iframe src='https://888888b.github.io/Landing-page-barbearia/'/>
-            </div>
-            <div className="projetos-text">
-              <a className="a-github"  href="https://github.com/888888b/Landing-page-barbearia" target="_blank">Github</a>
-              <a href="https://888888b.github.io/Landing-page-barbearia/"  className="a-deploy" target="_blank"
->Deploy</a>
-            </div>
-          </div>
-            
-          <div className="projetos" id="projeto-3">
-            <div className="projetos-img">
-              <iframe src="https://buscadordecep-lyart.vercel.app/"/>
-            </div>
-            <div className="projetos-text">
-              <a className="a-github"  href="https://github.com/888888b/Buscador-de-CEP" target="_blank"
->Github</a>
-              <a href="https://buscadordecep-lyart.vercel.app/"  className="a-deploy" target="_blank"
->Deploy</a>
-            </div>
-          </div>
-            
-          <div className="projetos" id="projeto-4">
-            <div className="projetos-img">
-              <iframe src="https://888888b.github.io/Pagina-Formulario/"/>
-            </div>
-            <div className="projetos-text">
-              <a className="a-github" href="https://github.com/888888b/Pagina-Formulario" target="_blank"
->Github</a>
-              <a href="https://888888b.github.io/Pagina-Formulario/"  className="a-deploy" target="_blank"
->Deploy</a>
-            </div>
-          </div>
-            
-        </div>
-      </div>
     </main>
   )
 }
