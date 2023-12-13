@@ -2,7 +2,6 @@
 
 *{
   margin: 0;
-  box-sizing: border-box;
 }
 
 body{
@@ -415,18 +414,9 @@ footer p{
 @media screen and (max-width: 550px){
   .header-container{
     display: flex;
+    justify-content: start;
     flex-direction: column;
-    align-items: flex-start;
     row-gap: 1rem;
-    padding: 20px 15px;
-  }
-
-  .container-links{
-    margin: auto;
-    padding: 0px;
-  }
-
-  .container-links a{
   }
 
   .div-titulo-sobre{
@@ -466,7 +456,7 @@ footer p{
     flex-direction: column;
     max-height: 100%;
     padding: 0px;
-    row-gap: 1rem;
+    row-gap:
   }
 
   #div-sobre-text{
@@ -495,91 +485,6 @@ footer p{
   #div-sobre-img img{
     width: 100%;
     height: 100%;
-  }
-
-  .experiencia-titulo h2{
-    font-size: 1.6em;
-  }
-
-  .div-experiencia{
-    display: flex;
-    flex-direction: column;
-    row-gap: 3rem;
-    padding: 30px 0px 0px 0px;
-  }
-
-  .experiencia-divs{
-    display: flex;
-    flex-direction: column;
-    row-gap: 3rem;
-  }
-
-  .experiencia-text{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    row-gap: .7rem;
-  }
-
-  .experiencia-text h1{
-    font-size: 2em;
-  }
-
-  .experiencia-text h2{
-    font-size: 1.2em;
-  }
-
-  .experiencia-text h1 span{
-    font-size: 1.1em;
-  }
-
-  .div-estudos{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    padding: 5px 15px 0px 15px;
-  }
-
-  .div-estudos ul li{
-    font-weight: 400;
-    padding-left: 2rem;
-  }
-
-  .div-estudos ul li::before{
-    width: .9pt;
-  }
-
-  .portifolio-titulo h2{
-    font-size: 1.6em;
-  }
-
-  .portifolio-titulo{
-    display: flex;
-    flex-direction: column;
-    row-gap: 1.5rem;
-  }
-
-  .portifolio-titulo h1{
-    font-size: 2.6em;
-  }
-
-  footer{
-    display: flex;
-    flex-direction: column;
-    padding: 20px 15px;
-    row-gap: 1.5rem;
-  }
-
-  footer p{
-    font-size: 1.5em;
-  }
-
-  #footer-icons{
-    padding: 0px;
-  }
-
-  #footer-icons a{
-    font-size: 2em;
   }
 }
 
