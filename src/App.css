@@ -168,7 +168,7 @@ span{
 }
 
 #div-sobre-text h2{
-  font: 600 1.8em arial, sans-serif;
+  font: 600 1.7em arial, sans-serif;
   color:#F28E12;
 }
 
@@ -188,7 +188,7 @@ span{
 
 #div-sobre-img{
   width: 45%;
-  min-width: 450px;
+  min-width: 300px;
 }
 
 #div-sobre-img img{
@@ -201,7 +201,7 @@ span{
   width: 100%;
   display: flex;
   flex-direction: column;
-  padding: 30px 0px;
+  padding: 30px 0px 0px 0px;
   border-radius: 5px;
   row-gap: 2rem;
   background-image: linear-gradient(to right, rgb(255,255,255, 0.15), rgb(255, 255, 255, 0.1), rgb(255, 255, 255, 0.1));
@@ -223,20 +223,20 @@ span{
 .experiencia-text{
   display: flex;
   flex-direction: column;
-  row-gap: 1.5rem;
+  row-gap: 1rem;
   width: 50%;
   padding: 10px 20px;
 }
 
 .experiencia-text h2{
   text-transform: uppercase;
-  font: 500 1.4em arial, sans-serif;
+  font: 500 1.3em arial, sans-serif;
   color:  rgb(242, 142, 18, 0.9);
 }
 
 .experiencia-text h1{
   max-width: 90%;
-  font: 600 2.4em arial, sans-serif;
+  font: 600 2.3em arial, sans-serif;
   color: white;
   line-height: 150%;
 }
@@ -261,7 +261,7 @@ span{
 }
 
 .div-estudos ul li{
-  font: 600 1.8em arial, sans-serif;
+  font: 500 1.8em arial, sans-serif;
   color: white;
   position: relative;
   padding-left: 2.5rem;
@@ -376,17 +376,204 @@ footer p{
 }
 
 .images-buttons a{
-  font: 500 1.5em arial ,sans-serif;
+  font: 400 1.5em arial ,sans-serif;
   text-decoration: none;
   background-color: black;
   color: white;
-  padding: 5px 30px;
+  padding: 5px 35px;
   border-radius: 20px;
   transition: all .2s ease-in-out;
 }
 
 .images-buttons a:hover{
   transform: scale(1.05);
+}
+
+@media screen and (max-width: 1050px) {
+
+  .container-links a{
+    font-size: 1.9em
+  }
+
+  #div-titulo-text h2{
+    font-size: 1.5em;
+  }
+
+  #div-titulo-text h1{
+    font-size: 3.6em;
+  }
+
+  #div-titulo-text a{
+    font-size: 1.8em; 
+  }
+
+  #img-div{
+    width: 250px;
+    height: 250px;
+  }
+
+  #div-sobre-text h2{
+    font-size: 1.5em;
+  }
+
+  #div-sobre-text p{
+    font-size: 1.15em;
+  }
+
+  #div-sobre-text h1{
+    font-size: 2.8em;
+  }
+
+  .experiencia-text h1{
+    font-size: 2.2em;
+  }
+
+  .experiencia-text h1 span{
+    font-size: 1.2em;
+  }
+
+  footer{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.3rem;
+    justify-content: center;
+    padding: 20px 0px;
+  }
+
+  footer p{
+    font-size: 2em;
+  }
+
+  #footer-icons a{
+    font-size: 2.2em; 
+  }
+}
+
+@media screen and (max-width: 930px){
+
+  .div-titulo-sobre{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  #div-titulo-text{
+    width: 100%;
+  }
+
+  #div-titulo-text h1{
+    font-size: 3.5em;
+  }
+
+  #div-titulo-text h2{
+    font-size: 1.3em;
+  }
+
+  #div-titulo-text a{
+    font-size: 1.7em;
+  }
+
+  #img-div{
+    width: 280px;
+    height: 280px;
+  }
+
+  #div-sobre-text h1{
+    font-size: 2.6em;
+  }
+
+  .experiencia-text h1{
+    font-size: 2em;
+  }
+
+  .experiencia-text h1 span{
+    font-size: 1em;
+  }
+
+  .div-estudos{
+    display: flex;
+    justify-content: center;
+    padding: 0px 0px 0px 0px;
+  }
+
+  .div-estudos ul li{
+    font-size: 1.8em;
+  }
+
+  .div-estudos ul li::before{
+    width: .9pt;
+  }
+}
+
+@media screen and (max-width: 730px){
+  #div-titulo-text{
+  }
+
+  #div-titulo-text h1{
+    font-size: 3.1em;
+  }
+
+  #div-titulo-text a{
+    font-size: 1.5em;
+  }
+
+  #img-div{
+    width: 240px;
+    height: 240px;
+  }
+
+  .div-sobre{
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0px 0px 0px;
+    row-gap: 2rem;
+    max-height: 100%;
+  }
+
+  #div-sobre-text{
+    padding: 0px 20px;
+    width: 100%;
+  }
+
+  #div-sobre-img{
+    width: 100%;
+    min-height: 100%;
+  }
+
+  .div-experiencia{
+    display: flex;
+    flex-direction: column;
+    row-gap: 3rem;
+    padding: 20px 0px 0px 0px;
+  }
+
+  .experiencia-divs{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 2.5rem;
+  }
+
+  .experiencia-text{
+    width: 100%;
+  }
+
+  
+
+  .div-estudos{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    padding: 0px 15px;
+  }
+
+  footer p{
+    font-size: 1.8em;
+  }
+
+  #footer-icons a{
+    font-size: 2.1em;
+  }
 }
 
 @media screen and (max-width: 550px){
@@ -425,11 +612,12 @@ footer p{
   }
 
   #div-titulo-text h1{
-    font-size: 3em;
+    font-size: 2.8em;
   }
 
   #div-titulo-text a{
     margin-top: 0px;
+    font-size: 1.4em;
   }
 
   #img-div{
@@ -456,7 +644,7 @@ footer p{
   }
 
   #div-sobre-text h1{
-    font-size: 2.8em;
+    font-size: 2.7em;
   }
 
   #div-sobre-text p{
@@ -488,7 +676,7 @@ footer p{
   .experiencia-divs{
     display: flex;
     flex-direction: column;
-    row-gap: 3rem;
+    row-gap: 2.3rem;
   }
 
   .experiencia-text{
@@ -499,27 +687,35 @@ footer p{
   }
 
   .experiencia-text h1{
-    font-size: 2em;
+    font-size: 1.8em;
+    font-weight: 500;
   }
 
   .experiencia-text h2{
+    font-weight: 400;
     font-size: 1.2em;
   }
 
   .experiencia-text h1 span{
-    font-size: 1.1em;
+    font-size: 1.2em;
+    font-weight: 600;
   }
 
   .div-estudos{
     width: 100%;
     display: flex;
     align-items: center;
+    justify-content: flex-start;
     padding: 5px 15px 0px 15px;
   }
 
   .div-estudos ul li{
     font-weight: 400;
     padding-left: 2rem;
+  }
+
+  .div-estudos ul p{
+    font-weight: 400;
   }
 
   .div-estudos ul li::before{

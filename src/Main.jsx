@@ -8,7 +8,7 @@ function Main(){
 
         <div className="divs-titulo" id="div-titulo-text">
           <h2>Sou <span>Vitor Hugo</span></h2>
-          <h1>Desenvolvedor Web</h1>
+          <h1>Desenvolvedor <br/>Web</h1>
           <a href="mailto:vitorhugo621contato@gmail.com" target="_blank">Contate-me</a>
         </div>
         
