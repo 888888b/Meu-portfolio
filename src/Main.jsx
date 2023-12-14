@@ -24,7 +24,7 @@ function Main(){
         <div id="div-sobre-text">
           <h2>Sobre min</h2>
           <h1>Sou um Desenvolvedor <br/>Web</h1>
-          <p>Desde de criança sou fascinado pela maneira como são criados programas e sistemas, e depois de anos aqui estou , na programação!</p>
+          <p>Desde criança sou fascinado pela maneira como são criados programas e sistemas, e depois de anos aqui estou , na programação!</p>
         </div>
 
         <div id="div-sobre-img">
