@@ -1,10 +1,17 @@
+import React, { useEffect } from 'react';
 import imgDev from "../src/images/img-dev.jpg";
 import imgPerfil from "../src/images/foto-perfil.png";
+import AOS from "aos";
+import 'aos/dist/aos.css';
+
 
 function Main(){
+  useEffect( () => {
+    AOS.init();
+  }, [])
   return(
     <main className="main-container">
-      <div className="div-titulo-sobre">
+      <div className="div-titulo-sobre" data-aos="fade-up" data-aos-delay="250">
 
         <div className="divs-titulo" id="div-titulo-text">
           <h2>Sou <span>Vitor Hugo</span></h2>

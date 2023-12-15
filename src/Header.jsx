@@ -1,10 +1,13 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faTwitter, faInstagram, faGithub, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+import AOS from "aos";
+import 'aos/dist/aos.css';
 
 function Cabeça(){
+  AOS.init();
   return(
-    <header>
+    <header data-aos="fade-down" data-aos-delay="250">
       <div className="header-container">
         <h1>Vitor</h1>
         <div className="container-links">
