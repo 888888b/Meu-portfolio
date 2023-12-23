@@ -3,7 +3,7 @@ import { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import barbIMG from "../src/images/barbearia.jpg";
 import loginIMG from "../src/images/login.jpg";
-import quesIMG from "../src/images/questionario.jpg";
+import quesIMG from "../src/images/questionario.png";
 import buskIMG from "../src/images/buscador.jpg";
 import calculator from "../src/images/calculator.png";
 import html from "../src/images/html-log.png";
