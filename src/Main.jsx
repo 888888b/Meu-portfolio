@@ -3,7 +3,6 @@ import imgDev from "../src/images/img-dev.jpg";
 import imgPerfil from "../src/images/foto-perfil.png";
 import AOS from "aos";
 import html from "../src/images/html-log.png";
-import js from '../src/images/js-loogo.png';
 import js2 from "../src/images/js-logo.webp";
 import css from "../src/images/css-log.png";
 import react from "../src/images/react-logo.png";
