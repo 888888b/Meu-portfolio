@@ -128,21 +128,20 @@ span{
 }
 
 #img-div{
-  width: 270px;
-  height: 270px;
+  width: 290px;
+  height: 290px;
   transform: rotate(45deg);
-  background-color: black;
   display: flex;
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
   overflow: hidden;
-  box-shadow: 1px 1px 10px rgb(255, 255, 255, .1);
+  box-shadow: 1px 1px 5px black;
 }
 
 #img-div img{
-  width: 130%;
-  height: 130%;
+  width: 145%;
+  height: 145%;
   transform: rotate(-45deg);
   object-fit: cover;
 }
@@ -361,11 +360,6 @@ footer p{
   font: 600 1.2em arial,sans-serif;
 }
 
-.discriçao-imgs h1::before{
-  content: "\2022";
-  margin-right: 5px;
-}
-
 .discriçao-imgs p{
   display: flex;
   gap: 1rem;
@@ -381,19 +375,19 @@ footer p{
 .discriçao-imgs p span::before{
   content: "\2022";
   margin-right: 5px;
-  color: red;
+  color: yellow;
 }
 
 .images-btn{
   width: 100%;
   display: flex;
   flex-direction: row;
-  gap: 1rem;
+  gap: 2rem;
   justify-content: center;
 }
 
 .images-buttons a{
-  font: 400 1.2em arial ,sans-serif;
+  font: 400 1em arial ,sans-serif;
   text-decoration: none;
   background-color: black;
   color: white;
@@ -430,8 +424,8 @@ footer p{
   }
 
   #img-div{
-    width: 250px;
-    height: 250px;
+    width: 280px;
+    height: 280px;
   }
 
   #div-sobre-text h2{
@@ -488,8 +482,8 @@ footer p{
   }
 
   #img-div{
-    width: 260px;
-    height: 260px;
+    width: 270px;
+    height: 270px;
   }
 
   #div-sobre-text h1{
@@ -515,8 +509,8 @@ footer p{
   }
 
   #img-div{
-    width: 240px;
-    height: 240px;
+    width: 250px;
+    height: 250px;
   }
 
   .div-sobre{
@@ -528,8 +522,12 @@ footer p{
   }
 
   #div-sobre-text{
-    padding: 0px 20px;
     width: 100%;
+    padding: 0px 0px 0px 20px;
+  }
+
+  #div-sobre-text p{
+    min-width: 100%;
   }
 
   #div-sobre-text h1{
@@ -606,8 +604,8 @@ footer p{
   }
 
   #img-div{
-    width: 200px;
-    height: 200px;
+    width: 220px;
+    height: 220px;
   }
 
   .div-sobre{

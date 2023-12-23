@@ -76,8 +76,8 @@ function Carrosel(){
                   </p>
                 </div>
                 <div className="images-btn">
-                  <a href={projeto.linkGit} target="_blank">Github</a>
-                  <a href={projeto.linkDeploy} target="_blank">Deploy</a>
+                  <a href={projeto.linkGit} target="_blank">Codigo</a>
+                  <a href={projeto.linkDeploy} target="_blank">Pagina</a>
                 </div>
               </motion.div>
             </motion.div>

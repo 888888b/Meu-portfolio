@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import imgDev from "../src/images/img-dev.jpg";
-import imgPerfil from "../src/images/foto-perfil.png";
+import perfil from '../src/images/profile.png';
 import AOS from "aos";
 import html from "../src/images/html-log.png";
 import js2 from "../src/images/js-logo.webp";
@@ -25,7 +25,7 @@ function Main(){
         
         <div className="divs-titulo" id="div-titulo-img">
           <div id="img-div">
-            <img src={imgPerfil}/>
+            <img src={perfil}/>
           </div>
         </div>
         
