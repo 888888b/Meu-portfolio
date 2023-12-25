@@ -2,7 +2,6 @@ import { useState, useRef, useEffect } from "react";
 
 import { motion } from "framer-motion";
 import barbIMG from "../src/images/barbearia.jpg";
-import loginIMG from "../src/images/login.jpg";
 import quesIMG from "../src/images/questionario.png";
 import buskIMG from "../src/images/buscador.jpg";
 import calculator from "../src/images/calculator.png";
@@ -10,6 +9,7 @@ import html from "../src/images/html-log.png";
 import js2 from "../src/images/js-logo.webp";
 import css from "../src/images/css-log.png";
 import react from "../src/images/react-logo.png";
+import login2 from "../src/images/login-page-2.png";
 
 const projetos = [{
   linkDeploy: "https://888888b.github.io/Landing-page-barbearia/",
@@ -30,11 +30,11 @@ const projetos = [{
   titulo: "Calculadora",
   tecnologias: ["REACT.JS", "HTML e CSS"]
   }, {
-  linkDeploy: "https://888888b.github.io/Pagina_Login/",
-  linkGit: "https://github.com/888888b/Pagina_Login",
-  foto: loginIMG,
+  linkDeploy: "https://888888b.github.io/login-page-2/",
+  linkGit: "https://github.com/888888b/login-page-2",
+  foto: login2,
   titulo: "Login-page",
-  tecnologias: ["html e css"]
+  tecnologias: ["HTML e CSS"]
   }, {
   linkDeploy: "https://888888b.github.io/Pagina-Formulario/",
   linkGit: "https://github.com/888888b/Pagina-Formulario",
