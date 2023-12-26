@@ -12,17 +12,17 @@ import react from "../src/images/react-logo.png";
 import login2 from "../src/images/login-page-2.png";
 
 const projetos = [{
-  linkDeploy: "https://888888b.github.io/Landing-page-barbearia/",
-  linkGit: "https://github.com/888888b/Landing-page-barbearia",
-  foto: barbIMG,
-  titulo: "Landing-page",
-  tecnologias: ["HTML e CSS"]
-  }, {
   linkDeploy: "https://buscadordecep-lyart.vercel.app/",
   linkGit: "https://github.com/888888b/Buscador-de-CEP",
   foto: buskIMG,
   titulo: "Buscador-de-CEP",
   tecnologias: ["REACT.JS", "HTML e CSS"]
+  }, {
+  linkDeploy: "https://888888b.github.io/Login-page-3/",
+  linkGit: "https://github.com/888888b/Login-page-3",
+  foto: login2,
+  titulo: "Login-page",
+  tecnologias: ["HTML e CSS"]
   }, {
   linkDeploy: "https://calculadora-react-rho-six.vercel.app/",
   linkGit: "https://github.com/888888b/Calculadora-react",
@@ -30,10 +30,10 @@ const projetos = [{
   titulo: "Calculadora",
   tecnologias: ["REACT.JS", "HTML e CSS"]
   }, {
-  linkDeploy: "https://888888b.github.io/login-page-2/",
-  linkGit: "https://github.com/888888b/login-page-2",
-  foto: login2,
-  titulo: "Login-page",
+  linkDeploy: "https://888888b.github.io/Landing-page-barbearia/",
+  linkGit: "https://github.com/888888b/Landing-page-barbearia",
+  foto: barbIMG,
+  titulo: "Landing-page",
   tecnologias: ["HTML e CSS"]
   }, {
   linkDeploy: "https://888888b.github.io/Pagina-Formulario/",
@@ -41,7 +41,7 @@ const projetos = [{
   foto: quesIMG,
   titulo: "Formulario",
   tecnologias: ["HTML e CSS"]
-  }                         
+  }
 ];
 
 
