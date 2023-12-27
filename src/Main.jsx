@@ -34,8 +34,9 @@ function Main(){
       <div className="div-sobre">
         <div id="div-sobre-text">
           <h2>Sobre min</h2>
-          <h1>Explorando o mundo digital</h1>
-          <p>Desde criança sou fascinado pela tecnologia e sua transformação. Atualmente, sigo meus estudos na área da programação web.</p>
+          <h1>Estudante de Tecnologia</h1>
+          <p>Me chamo Vitor Hugo, sou um joven fascinado pela tecnologia, no momento estou estudando SQL server. Sou proficiente nas seguintes linguagens e framework:</p>
+          <p><span>JavaScript</span> <span>HTML</span> <span>CSS</span> <span>React</span></p>
         </div>
 
         <div id="div-sobre-img">
@@ -47,13 +48,13 @@ function Main(){
       <div className='experiencia'>
         <div className='experiencia-text'>
           <h1>Linguagens e Frameworks</h1>
-          <h2>E do meu conhecimento as tecnologias:</h2>
+          <h2>Minhas habilidades:</h2>
         </div>
         <div className='experiencia-icons'>
-          <div className='linguagem'><img src={js2}/></div>
-          <div className='linguagem'><img id="html" src={html}/></div>
-          <div className='linguagem'><img src={css}/></div>
-          <div className='linguagem'><img src={react}/></div>
+          <div className='linguagem'><img src={js2}/><h1>JavaScript</h1></div>
+          <div className='linguagem'><img id="html" src={html}/><h1>HTML</h1></div>
+          <div className='linguagem'><img src={css} id="css"/><h1>CSS</h1></div>
+          <div className='linguagem'><img src={react} id="react"/><h1>React</h1></div>
         </div>
       </div>
     </main>

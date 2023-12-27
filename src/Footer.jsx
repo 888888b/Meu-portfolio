@@ -6,7 +6,7 @@ import { faFacebook, faTwitter, faInstagram, faGithub, faWhatsapp } from '@forta
 function Footer(){
   return(
     <footer>
-      <p>Minha pagina de portifolio</p>
+      <p>Portifolio do Vitor Hugo</p>
       <div id="footer-icons" className="container-links">
         <a href="https://github.com/888888b" target="_blank"><FontAwesomeIcon icon={faGithub}/></a>
         <a href="https://www.instagram.com/vitor_araujo621/" target="_blank"><FontAwesomeIcon icon={faInstagram}/></a>
