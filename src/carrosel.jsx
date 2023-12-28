@@ -63,8 +63,8 @@ function Carrosel(){
   return(
     <div className="carrosel-app" ref={carrosel}>
       <h1>Meu portifolio</h1>
-      <motion.div>
-        <motion.div className="container-carrosel" ref={container} drag="x" dragConstraints={{ right: 0, left: -width - 20 }} >
+      <motion.div className="btn">
+        <motion.div className="container-carrosel" ref={container} drag="x" dragConstraints={{ right: 0, left: -width - 20 }}>
 
           {projetos.map( projeto => (
             <motion.div className="div-images">
