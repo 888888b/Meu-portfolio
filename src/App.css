@@ -138,8 +138,8 @@ span{
 }
 
 #img-div{
-  width: 320px;
-  height: 320px;
+  width: 310px;
+  height: 310px;
   transform: rotate(-45deg);
   display: flex;
   justify-content: center;
