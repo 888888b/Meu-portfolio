@@ -10,14 +10,15 @@ import js2 from "../src/images/js-logo.webp";
 import css from "../src/images/css-log.png";
 import react from "../src/images/react-logo.png";
 import login2 from "../src/images/login-page-2.png";
+import ophm from '../src/images/ophm.png';
 
 const projetos = [{
-  linkDeploy: "https://buscadordecep-lyart.vercel.app/",
-  linkGit: "https://github.com/888888b/Buscador-de-CEP",
-  foto: buskIMG,
-  titulo: "Buscador-de-CEP",
-  tecnologias: ["REACT.JS", "HTML e CSS"],
-  descriçao: "Aplicação que busca informações de endereço atraves de um CEP"
+  linkDeploy: "https://plataforma-filmes-three.vercel.app/",
+  linkGit: "https://github.com/888888b/Plataforma_filmes",
+  foto: ophm,
+  titulo: 'Plataforma de Filmes',
+  tecnologias: ['React.js', 'HTML e CSS'],
+  descriçao: "Projeto de uma plataforma de filmes que usa uma API"
   }, {
   linkDeploy: "https://888888b.github.io/Login-page-3/",
   linkGit: "https://github.com/888888b/Login-page-3",
@@ -32,6 +33,13 @@ const projetos = [{
   titulo: "Calculadora",
   tecnologias: ["REACT.JS", "HTML e CSS"],
   descriçao: "Calculadora feita em REACT.JS"
+  }, {
+  linkDeploy: "https://buscadordecep-lyart.vercel.app/",
+  linkGit: "https://github.com/888888b/Buscador-de-CEP",
+  foto: buskIMG,
+  titulo: "Buscador-de-CEP",
+  tecnologias: ["REACT.JS", "HTML e CSS"],
+  descriçao: "Aplicação que busca informações de endereço atraves de um CEP"
   }, {
   linkDeploy: "https://888888b.github.io/Landing-page-barbearia/",
   linkGit: "https://github.com/888888b/Landing-page-barbearia",

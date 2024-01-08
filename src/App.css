@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&family=Raleway:wght@400;500;600&display=swap');
 
 *{
   margin: 0;
@@ -389,14 +389,12 @@ footer p{
   align-items: flex-start;
   padding: 0px 15px;
   flex-direction: column;
-  row-gap: 1rem;
+  row-gap: .8rem;
 }
 
 .discriçao-imgs h1{
-  background: linear-gradient(to right, #FB7E12, #E02352);
-  -webkit-background-clip: text;
-  color: transparent;
-  font: 600 1.6em arial,sans-serif;
+  color: white;
+  font: 600 1.7em "Raleway",sans-serif;
 }
 
 .discriçao-imgs #tecnologias{
@@ -408,14 +406,14 @@ footer p{
 }
 
 .discriçao-imgs #descrição{
-  color: rgb(255, 255, 255, .9);
-  font: 600 1.1em arial, sans-serif;
+  color: rgb(255, 255, 255, .8);
+  font: 600 1.1em "Open Sans", sans-serif;
   margin-left: 10px;
 }
 
 .discriçao-imgs p span{
-  color: rgb(255, 255, 255, .7);
-  font: 600 .9em arial, sans-serif;
+  color: rgb(255, 255, 255, .8);
+  font: 600 .9em 'Open Sans', sans-serif;
 }
 
 .discriçao-imgs p span::before{
@@ -433,7 +431,7 @@ footer p{
 }
 
 .images-buttons a{
-  font: 400 1.4em arial ,sans-serif;
+  font: 400 1.3em arial ,sans-serif;
   text-decoration: none;
   background-color: black;
   color: white;
