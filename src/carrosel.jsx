@@ -17,28 +17,28 @@ const projetos = [{
   linkGit: "https://github.com/888888b/Plataforma_filmes",
   foto: ophm,
   titulo: 'Plataforma de Filmes',
-  tecnologias: ['React.js', 'HTML e CSS'],
-  descriçao: "Projeto de uma plataforma de filmes que usa uma API"
+  tecnologias: ['React.js', 'HTML e CSS', "JavaScript", "API"],
+  descriçao: "Projeto de uma plataforma de filmes que recebe dados de uma API"
   }, {
   linkDeploy: "https://888888b.github.io/Login-page-3/",
   linkGit: "https://github.com/888888b/Login-page-3",
   foto: login2,
   titulo: "Login-page",
-  tecnologias: ["HTML e CSS"],
+  tecnologias: ["HTML e CSS", "JavaScript"],
   descriçao: "Pagina de login com cadastro de usuario e senha"
   }, {
   linkDeploy: "https://calculadora-react-rho-six.vercel.app/",
   linkGit: "https://github.com/888888b/Calculadora-react",
   foto: calculator,
   titulo: "Calculadora",
-  tecnologias: ["REACT.JS", "HTML e CSS"],
+  tecnologias: ["REACT.JS", "HTML e CSS", "JavaScript"],
   descriçao: "Calculadora feita em REACT.JS"
   }, {
   linkDeploy: "https://buscadordecep-lyart.vercel.app/",
   linkGit: "https://github.com/888888b/Buscador-de-CEP",
   foto: buskIMG,
   titulo: "Buscador-de-CEP",
-  tecnologias: ["REACT.JS", "HTML e CSS"],
+  tecnologias: ["REACT.JS", "HTML e CSS", "JavaScript","API"],
   descriçao: "Aplicação que busca informações de endereço atraves de um CEP"
   }, {
   linkDeploy: "https://888888b.github.io/Landing-page-barbearia/",
@@ -70,7 +70,7 @@ function Carrosel(){
   
   return(
     <div className="carrosel-app" ref={carrosel}>
-      <h1>Meu portifolio</h1>
+      <h1>Meus Projetos</h1>
       <motion.div className="btn">
         <motion.div className="container-carrosel" ref={container} drag="x" dragConstraints={{ right: 0, left: -width - 20 }}>
 

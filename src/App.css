@@ -138,8 +138,8 @@ span{
 }
 
 #img-div{
-  width: 310px;
-  height: 310px;
+  width: 290px;
+  height: 290px;
   transform: rotate(-45deg);
   display: flex;
   justify-content: center;
@@ -202,7 +202,7 @@ span{
   font-size: 1.2em;
   text-transform: lowercase;
   padding: 0px 0px 3px 0px;
-  border-bottom: 2px solid #F28E12;
+  border-bottom: 1pt solid #F28E12;
 }
 
 #div-sobre-img{
