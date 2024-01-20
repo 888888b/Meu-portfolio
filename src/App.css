@@ -5,6 +5,11 @@
   box-sizing: border-box;
 }
 
+*:focus{
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
 body{
   background-color: black;
 }
@@ -191,16 +196,24 @@ span{
   max-width: 90%;
   font-size: 1.2em;
   font-weight: 500;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   color: white;
   line-height: 150%;
 }
 
-#div-sobre-text p span{
-  margin: 0px 15px 0px 0px;
-  font-weight: 600;
+#div-sobre-text .skils{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2rem;
+  row-gap: .5rem;
+}
+
+#div-sobre-text .skils span{
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 500;
   font-size: 1.2em;
-  text-transform: lowercase;
   padding: 0px 0px 3px 0px;
   border-bottom: 1pt solid #F28E12;
 }
@@ -321,7 +334,7 @@ footer p{
 }
 
 .carrosel-app{
-  width: 90%;
+  width: 85%;
   max-width: 2000px;
   margin: auto;
   padding: 40px 20px;
@@ -346,6 +359,7 @@ footer p{
   display: flex;
   flex-direction: row;
   gap: 3rem;
+  transform: translateX(0%);
 }
 
 .div-images{
@@ -443,6 +457,35 @@ footer p{
 
 .images-buttons a:hover{
   transform: scale(1.05);
+}
+
+.btnNavegação{
+  display: flex;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  font-weight: 300;
+  background-color: transparent;
+  position: absolute;  
+  z-index: 50;
+}
+
+#btn-left{
+  position: absolute;
+  left: 0px;
+}
+
+#btn-right{
+  position: absolute;
+  right: 0px;
+}
+
+#angle-icon{
+  color: white;
+  border-radius: 40px;
+  font-size: 5em;
+  background-color: black;
 }
 
 @media screen and (max-width: 1050px) {
@@ -550,9 +593,6 @@ footer p{
 }
 
 @media screen and (max-width: 730px){
-  #div-titulo-text{
-  }
-
   #div-titulo-text h1{
     font-size: 3.1em;
   }
@@ -638,6 +678,11 @@ footer p{
   #footer-icons a{
     font-size: 2.1em;
   }
+
+  .btnNavegação{
+    display: none;
+  }
+
 }
 
 @media screen and (max-width: 550px){
@@ -654,9 +699,6 @@ footer p{
     padding: 0px;
   }
 
-  .container-links a{
-  }
-
   .div-titulo-sobre{
     display: flex;
     align-items: center;
@@ -670,6 +712,35 @@ footer p{
     padding: 30px 15px;
     justify-content: center;
   }
+
+  .div-images{
+    min-width: 100%;
+  }
+
+  .images-buttons{
+    height: 250px;
+  }
+
+  .discriçao-imgs #tecnologias{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: .4rem;
+  }
+
+  .images-btn{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0;
+  }
+
+  .images-btn a{
+    font-size: 1.2em;
+    padding: 5px 30px;
+  }  
 
   #div-titulo-text h2{
     font-size: 1.3em;

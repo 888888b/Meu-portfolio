@@ -36,7 +36,10 @@ function Main(){
           <h2>Sobre min</h2>
           <h1>Estudante de Tecnologia</h1>
           <p>Me chamo Vitor Hugo, sou um jovem fascinado pela tecnologia. No momento, estou estudando SQL Server e sou proficiente nas seguintes linguagens e frameworks.</p>
-          <p><span>JavaScript</span> <span>HTML</span> <span>CSS</span> <span>React</span></p>
+
+          <div className='skils'>
+            <span>JavaScript</span> <span>HTML</span> <span>CSS</span> <span>React</span><span>Rest API</span>
+          </div>
         </div>
 
         <div id="div-sobre-img">
