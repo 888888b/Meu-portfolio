@@ -334,17 +334,68 @@ footer p{
 }
 
 .carrosel-app{
-  width: 85%;
+  width: 95%;
   max-width: 2000px;
   margin: auto;
   padding: 40px 20px;
-  background-image: linear-gradient(to right, rgb(255,255,255, 0.15), rgb(255, 255, 255, 0.1), rgb(255, 255, 255, 0.1));
   border-radius: 5px;
   display: flex;
   justify-content: center;
   overflow: hidden;
   flex-direction: column;
   row-gap: 3rem;
+}
+
+.swiper{
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.control-slides{
+  max-width: 60%;
+  min-width: 500px;
+  min-height: 400px;
+  margin: auto;
+}
+
+.swiper-img #Stranger{
+  object-fit: cover;
+}
+
+#swiper-img img{
+  border: 1pt solid white;
+  border-radius: 10px;
+  object-position: center;
+}
+
+.swiper-button-next, .swiper-button-prev{
+  color: white !important;
+  transform: scale(.8);
+}
+
+.swiper-button-next::before, .swiper-button-prev::before{
+  content: '';
+  width: 200px;
+  min-height: 150vh;
+  position: absolute;
+  z-index: -1;
+};
+
+.swiper-button-next{
+  margin-right: -5px;
+}
+
+.swiper-button-prev{
+  margin-left: -5px;
+}
+
+.swiper-button-next::before{
+  position: absolute;
+  background-image: linear-gradient(to left, black, black, transparent);
+}
+
+.swiper-button-prev::before{
+  background-image: linear-gradient(to right, black, black, transparent);
 }
 
 .carrosel-app h1{
