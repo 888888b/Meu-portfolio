@@ -31,26 +31,26 @@ const projetos = [{
   descriçao: "Plataforma de filmes feita em REACT.JS que recebe dados de uma API",
   id: 'Stranger'
   }, {
+    linkDeploy: "https://calculadora-react-rho-six.vercel.app/",
+    linkGit: "https://github.com/888888b/Calculadora-react",
+    foto: CalculatorApp,
+    titulo: "Calculadora",
+    tecnologias: ["REACT.JS", "HTML e CSS", "JavaScript"],
+    descriçao: "Calculadora responsiva e funcional feita com REACT.JS",
+    id: 'CalculatorApp'
+  }, {
   linkDeploy: "https://888888b.github.io/Login-page-3/",
   linkGit: "https://github.com/888888b/Login-page-3",
   foto: LoginPage,
-  titulo: "Login-page",
+  titulo: "Pagina de Login",
   tecnologias: ["HTML e CSS", "JavaScript"],
   descriçao: "Pagina de login com cadastro de usuario e senha",
   id: 'LoginPage'
-  }, {
-  linkDeploy: "https://calculadora-react-rho-six.vercel.app/",
-  linkGit: "https://github.com/888888b/Calculadora-react",
-  foto: CalculatorApp,
-  titulo: "Calculadora",
-  tecnologias: ["REACT.JS", "HTML e CSS", "JavaScript"],
-  descriçao: "Calculadora responsiva e funcional feita com REACT.JS",
-  id: 'CalculatorApp'
-  }, {
+  },{
   linkDeploy: "https://buscadordecep-lyart.vercel.app/",
   linkGit: "https://github.com/888888b/Buscador-de-CEP",
   foto: CepPage,
-  titulo: "Buscador-de-CEP",
+  titulo: "Buscador de CEP",
   tecnologias: ["REACT.JS", "HTML e CSS", "JavaScript","API"],
   descriçao: "Aplicação que busca informações de endereço atraves de uma api usando CEP",
   id: 'CepPage'
@@ -58,7 +58,7 @@ const projetos = [{
   linkDeploy: "https://888888b.github.io/Landing-page-barbearia/",
   linkGit: "https://github.com/888888b/Landing-page-barbearia",
   foto: LandingPage,
-  titulo: "Landing-page",
+  titulo: "Landing Page",
   tecnologias: ["HTML e CSS"],
   descriçao: "Landing-page HTML para uma Barbearia",
   id: 'LandingPage'
@@ -155,6 +155,15 @@ function Carrosel(){
                 <div ref={controlSlides} className="control-slides">
                   <div className="images-img" id="swiper-img">
                     <img id={projeto.id} src={projeto.foto}/>
+                    <div className="img-gradient"></div>
+                  </div>
+
+                  <div className="slide-link-button">
+                    <h2>{projeto.titulo}</h2>
+                    <div className="link-buttons">
+                      <a target="_blank" href={projeto.linkDeploy}>Pagina</a>
+                      <a target="_blank" href={projeto.linkGit}>Codigo</a>
+                    </div>
                   </div>
                 </div>
               </div>
