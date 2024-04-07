@@ -367,12 +367,13 @@ footer p{
 }
 
 .control-slides{
-  max-width: 60%;
-  min-width: 500px;
+  max-width: 30vw;
+  padding: 20px 7px 10px 7px;
   margin: auto;
   overflow-x: hidden;
-  border: 1pt solid var(--color-white);
-  border-radius: 10px;
+  border: 1pt solid rgb(255,255,255,.75);
+  border-radius: 5px;
+  background-image: linear-gradient(to right, var(--color-white-opacity-015), var(--color-white-opacity-01));
 }
 
 .slide-link-button{
@@ -381,8 +382,8 @@ footer p{
   flex-direction: column;
   border-top: none;
   border-bottom-left-radius: 10px;
+  padding: 10px 10px 0px 10px;
   border-bottom-right-radius: 10px;
-  padding: 20px 20px 10px 20px;
   row-gap: 1rem;
 }
 
@@ -393,32 +394,58 @@ footer p{
 }
 
 .slide-link-button h2{
-  font: 500 2em 'Raleway', sans-serif;
-  background: linear-gradient(to right, var(--color-orange), var(--color-light-red));
-  -webkit-background-clip: text;
-  color: transparent;
-  border-bottom: 1pt solid var(--color-white);
+  font: 500 1.5em 'Raleway', sans-serif;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.slide-link-button #indent-content{
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  border-left: 1pt solid rgb(255,255,255,.8);
+  margin-left: 25px;
+  padding: 9px 0px 9px 10px;
+  margin-bottom: 15px;
+}
+
+.slide-link-button #indent-content h3{
+  color: rgb(255,255,255,.8);
+  font: 500 1.05em 'Roboto',helvetica, sans-serif;
+}
+
+.slide-link-button #indent-content #tecnologies{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.slide-link-button #tecnologies h4{
+  color: white;
+  font: 600 .9em 'Roboto',helvetica, sans-serif;
 }
 
 .link-buttons a{
-  background: linear-gradient(to right, var(--color-orange), var(--color-light-red));
-  color: transparent;
-  -webkit-background-clip: text;
-  border: 1pt solid var(--color-white);
-  padding: 5px 30px;
-  border-radius: 40px;
-  font: 400 1.4em 'Roboto', sans-serif;
+  padding: 5px 40px;
+  color: white;
+  border-radius: 5px;
+  font: 600 1.1em 'Open Sans', serif;
   cursor: pointer;
+  background-image: linear-gradient(45deg, orange, purple);
+  text-decoration: none;
 }
 
-.swiper-img #Stranger{
+
+#swiper-img img{
+  width: 100%;
+  height: 100%;
+  border-bottom: none;
+  object-position: center;
+  opacity: .9;
   object-fit: cover;
 }
 
-#swiper-img img{
-  border-bottom: none;
-  object-position: center;
-}
 .img-gradient{
   height: 10%;
   width: 100%;
@@ -459,11 +486,30 @@ footer p{
 }
 
 .carrosel-app h1{
-  background: linear-gradient(to right, var(--color-orange), var(--color-light-red));
-  -webkit-background-clip: text;
+  display: inline-block;
+  width: fit-content;
+  margin: auto;
   color: transparent;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(to right, #FB7E12, #E02352);
+  padding: 15px 30px;
+  border-radius: 5px;
   text-align: center;
   font: 600 2em arial, sans-serif;
+  position: relative;
+  z-index: 1;
+}
+
+.carrosel-app h1::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  background-image: linear-gradient(to right, var(--color-white-opacity-015), var(--color-white-opacity-01));
+  z-index: -1;
 }
 
 .container-carrosel{
@@ -480,17 +526,20 @@ footer p{
 }
 
 .images-img{
-  width: 100%;
-  height: 300px;
+  width: 85%;
+  height: 200px;
+  margin: auto;
+  border: 1pt solid rgb(255,255,255, .2);
   overflow: hidden;
+  border-radius: 5px;
   box-sizing: border-box;
   position: relative;
 }
 
 .images-img img{
+  object-fit: cover;
   width: 100%;
   height: 100%;
-  object-fit: cover;
   border-radius: 5px;
   transition: transform .3s ease-in-out;
 }

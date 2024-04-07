@@ -9,7 +9,7 @@ import CalculatorApp from "../src/images/CalculatorApp.png";
 import html from "../src/images/html-log.png";
 import js2 from "../src/images/js-logo.webp";
 import css from "../src/images/css-log.png";
-import stranger from '../src/images/stranger.png';
+import moviezilla from '../src/images/moviezilla.png';
 import react from "../src/images/react-logo.png";
 import LoginPage from "../src/images/LoginPage.png";
 import { couldStartTrivia } from "typescript";
@@ -25,17 +25,17 @@ import 'swiper/css/pagination';
 const projetos = [{
   linkDeploy: "https://plataforma-filmes-three.vercel.app/",
   linkGit: "https://github.com/888888b/Plataforma_filmes",
-  foto: stranger,
+  foto: moviezilla,
   titulo: 'Plataforma de Filmes',
-  tecnologias: ['React.js', 'HTML e CSS', "JavaScript", "API"],
+  tecnologias: [['React.js'], ['HTML e CSS'], ["JavaScript"], ["API"]],
   descriçao: "Plataforma de filmes feita em REACT.JS que recebe dados de uma API",
-  id: 'Stranger'
+  id: 'moviezilla'
   }, {
     linkDeploy: "https://calculadora-react-rho-six.vercel.app/",
     linkGit: "https://github.com/888888b/Calculadora-react",
     foto: CalculatorApp,
     titulo: "Calculadora",
-    tecnologias: ["REACT.JS", "HTML e CSS", "JavaScript"],
+    tecnologias: [["REACT.JS"], ["HTML e CSS"], ["JavaScript"]],
     descriçao: "Calculadora responsiva e funcional feita com REACT.JS",
     id: 'CalculatorApp'
   }, {
@@ -43,7 +43,7 @@ const projetos = [{
   linkGit: "https://github.com/888888b/Login-page-3",
   foto: LoginPage,
   titulo: "Pagina de Login",
-  tecnologias: ["HTML e CSS", "JavaScript"],
+  tecnologias: [["HTML e CSS"], ["JavaScript"]],
   descriçao: "Pagina de login com cadastro de usuario e senha",
   id: 'LoginPage'
   },{
@@ -51,7 +51,7 @@ const projetos = [{
   linkGit: "https://github.com/888888b/Buscador-de-CEP",
   foto: CepPage,
   titulo: "Buscador de CEP",
-  tecnologias: ["REACT.JS", "HTML e CSS", "JavaScript","API"],
+  tecnologias: [["REACT.JS"], ["HTML e CSS"], ["JavaScript"],["API"]],
   descriçao: "Aplicação que busca informações de endereço atraves de uma api usando CEP",
   id: 'CepPage'
   }, {
@@ -160,6 +160,14 @@ function Carrosel(){
 
                   <div className="slide-link-button">
                     <h2>{projeto.titulo}</h2>
+                    <div id="indent-content">
+                      <h3>{projeto.descriçao}</h3>
+                      <div id="tecnologies">
+                        {projeto.tecnologias.map(tecn => (
+                          <h4>{tecn}</h4>
+                        ))}
+                      </div>
+                    </div>
                     <div className="link-buttons">
                       <a target="_blank" href={projeto.linkDeploy}>Pagina</a>
                       <a target="_blank" href={projeto.linkGit}>Codigo</a>
