@@ -28,7 +28,7 @@ const projetos = [{
   foto: moviezilla,
   titulo: 'Plataforma de Filmes',
   tecnologias: [['React.js'], ['HTML e CSS'], ["JavaScript"], ["API"]],
-  descriçao: "Plataforma de filmes feita em REACT.JS que recebe dados de uma API",
+  descriçao: "Plataforma de filmes que consome dados de uma api",
   id: 'moviezilla'
   }, {
     linkDeploy: "https://calculadora-react-rho-six.vercel.app/",
@@ -36,7 +36,7 @@ const projetos = [{
     foto: CalculatorApp,
     titulo: "Calculadora",
     tecnologias: [["REACT.JS"], ["HTML e CSS"], ["JavaScript"]],
-    descriçao: "Calculadora responsiva e funcional feita com REACT.JS",
+    descriçao: "Calculadora responsiva e funcional feita com react.js",
     id: 'CalculatorApp'
   }, {
   linkDeploy: "https://888888b.github.io/Login-page-3/",
@@ -134,20 +134,6 @@ function Carrosel(){
   return autorizado ?(
     <div className="carrosel-app" ref={carrosel}>
       <h1>Meus Projetos</h1>
-
-      {widthApp < 750 ? (
-        <motion.div className="btn">
-          <motion.div className="container-carrosel" ref={container} drag="x" dragConstraints={{ right: 0, left: -width - 20 }}>
-            {projetos.map( projeto => (
-              <motion.div className="div-images">
-                <motion.div className="images-img">
-                  <img src={projeto.foto}/>
-                </motion.div>
-              </motion.div>
-            ))} 
-          </motion.div>
-        </motion.div>
-      ):(
         <div className="swiper">
           <div className="swiper-wrapper" ref={container}>
             {projetos.map( projeto => (
@@ -180,7 +166,6 @@ function Carrosel(){
           <div className="swiper-button-prev"></div>
           <div className="swiper-button-next"></div>
         </div>
-      )}
     </div>
   ) : null
 }

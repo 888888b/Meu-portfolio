@@ -18,7 +18,7 @@ function Main(){
       <div className="div-titulo-sobre" data-aos="fade-up" data-aos-delay="300">
 
         <div className="divs-titulo" id="div-titulo-text">
-          <h2>Sou <span>Vitor Hugo</span></h2>
+          <h2>Sou o <span>Vitor Hugo</span></h2>
           <h1>Desenvolvedor <br/>Web</h1>
           <a href="mailto:vitorhugo621contato@gmail.com" target="_blank">Contate-me</a>
         </div>
