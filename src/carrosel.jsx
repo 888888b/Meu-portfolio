@@ -11,9 +11,11 @@ import js2 from "../src/images/js-logo.webp";
 import css from "../src/images/css-log.png";
 import moviezilla from '../src/images/moviezilla.png';
 import react from "../src/images/react-logo.png";
-import LoginPage from "../src/images/LoginPage.png";
+import LoginPage from "../src/images/login-page.png";
 import { couldStartTrivia } from "typescript";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import AOS from "aos";
+import 'aos/dist/aos.css';
 
 import Swiper from 'swiper';
 import { Navigation, Pagination } from 'swiper/modules';
@@ -27,31 +29,31 @@ const projetos = [{
   linkGit: "https://github.com/888888b/Plataforma_filmes",
   foto: moviezilla,
   titulo: 'Plataforma de Filmes',
-  tecnologias: [['React.js'], ['HTML e CSS'], ["JavaScript"], ["API"]],
+  tecnologias: [['React'], ['HTML e CSS'], ["JavaScript"], ["API"]],
   descriçao: "Plataforma de filmes que consome dados de uma api",
   id: 'moviezilla'
-  }, {
+  },{
+    linkDeploy: "https://login-page-f56l.vercel.app/",
+    linkGit: "https://github.com/888888b/Login_page",
+    foto: LoginPage,
+    titulo: "Pagina de Login",
+    tecnologias: [["HTML e CSS"], ["JavaScript"], ['React']],
+    descriçao: "Pagina com login e cadastro de usuario. Pagina amigavel e responsiva.",
+    id: 'LoginPage'
+    }, {
     linkDeploy: "https://calculadora-react-rho-six.vercel.app/",
     linkGit: "https://github.com/888888b/Calculadora-react",
     foto: CalculatorApp,
     titulo: "Calculadora",
-    tecnologias: [["REACT.JS"], ["HTML e CSS"], ["JavaScript"]],
+    tecnologias: [["REACT"], ["HTML e CSS"], ["JavaScript"]],
     descriçao: "Calculadora responsiva e funcional feita com react.js",
     id: 'CalculatorApp'
-  }, {
-  linkDeploy: "https://888888b.github.io/Login-page-3/",
-  linkGit: "https://github.com/888888b/Login-page-3",
-  foto: LoginPage,
-  titulo: "Pagina de Login",
-  tecnologias: [["HTML e CSS"], ["JavaScript"]],
-  descriçao: "Pagina de login com cadastro de usuario e senha",
-  id: 'LoginPage'
   },{
   linkDeploy: "https://buscadordecep-lyart.vercel.app/",
   linkGit: "https://github.com/888888b/Buscador-de-CEP",
   foto: CepPage,
   titulo: "Buscador de CEP",
-  tecnologias: [["REACT.JS"], ["HTML e CSS"], ["JavaScript"],["API"]],
+  tecnologias: [["REACT"], ["HTML e CSS"], ["JavaScript"],["API"]],
   descriçao: "Aplicação que busca informações de endereço atraves de uma api usando CEP",
   id: 'CepPage'
   }, {
@@ -119,6 +121,8 @@ function Carrosel(){
   });
   
   useEffect( () => {
+    AOS.init();
+    duration: 900;
 
     const loadingDelay = setTimeout(() => {
       setAutorizado(true);
@@ -132,7 +136,7 @@ function Carrosel(){
   }, [setWidthApp, swiper]);
 
   return autorizado ?(
-    <div className="carrosel-app" ref={carrosel}>
+    <div className="carrosel-app" ref={carrosel} data-aos="fade-up" data-aos-delay="300">
       <h1>Meus Projetos</h1>
         <div className="swiper">
           <div className="swiper-wrapper" ref={container}>
@@ -147,7 +151,7 @@ function Carrosel(){
                   <div className="slide-link-button">
                     <h2>{projeto.titulo}</h2>
                     <div id="indent-content">
-                      <h3>{projeto.descriçao}</h3>
+                      <p>{projeto.descriçao}</p>
                       <div id="tecnologies">
                         {projeto.tecnologias.map(tecn => (
                           <h4>{tecn}</h4>

@@ -1,9 +1,14 @@
 import react from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faTwitter, faInstagram, faGithub, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
-
+import AOS from "aos";
+import 'aos/dist/aos.css';
 
 function Footer(){
+  AOS.init({
+    duration: 300
+  },[]);
+
   return(
     <footer>
       <p>Portifolio do Vitor Hugo</p>

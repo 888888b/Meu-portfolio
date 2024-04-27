@@ -2,17 +2,21 @@ import React, { useEffect } from 'react';
 import imgDev from "../src/images/img-dev.jpg";
 import perfil from '../src/images/profile.png';
 import AOS from "aos";
-import html from "../src/images/html-log.png";
-import js2 from "../src/images/js-logo.webp";
-import css from "../src/images/css-log.png";
-import react from "../src/images/react-logo.png";
 import 'aos/dist/aos.css';
-
+import { IoLogoCss3 } from "react-icons/io";
+import { IoLogoHtml5 } from "react-icons/io";
+import { FaReact } from "react-icons/fa6";
+import { RiJavascriptFill } from "react-icons/ri";
+import { AiTwotoneApi } from "react-icons/ai";
+import { IoLogoPython } from "react-icons/io";
+import { FaGitSquare } from "react-icons/fa";
 
 function Main(){
   useEffect( () => {
     AOS.init();
+      duration: 900;
   }, [])
+
   return(
     <main className="main-container">
       <div className="div-titulo-sobre" data-aos="fade-up" data-aos-delay="300">
@@ -31,15 +35,11 @@ function Main(){
         
       </div>
 
-      <div className="div-sobre">
+      <div className="div-sobre" data-aos="fade-up">
         <div id="div-sobre-text">
           <h2>Sobre min</h2>
           <h1>Estudante de Tecnologia</h1>
-          <p>Me chamo Vitor Hugo, sou um jovem fascinado pela tecnologia. No momento, estou estudando SQL Server e sou proficiente nas seguintes linguagens e frameworks.</p>
-
-          <div className='skils'>
-            <span>JavaScript</span> <span>HTML</span> <span>CSS</span> <span>React</span><span>Rest API</span>
-          </div>
+          <p>Olá, meu nome é Vitor Hugo e sou um jovem fascinado pela tecnologia. Estou há mais de um ano estudando e praticando minhas habilidades na área do desenvolvimento web. É possível ver minha evolução através dos projetos que realizei até então. No momento, estou estudando SQL Server, pois busco expandir meus conhecimentos e capacidade de desenvolver aplicações.</p>
         </div>
 
         <div id="div-sobre-img">
@@ -48,16 +48,42 @@ function Main(){
         
       </div>
 
-      <div className='experiencia'>
+      <div className='experiencia' data-aos="fade-up">
         <div className='experiencia-text'>
-          <h1>Linguagens e Frameworks</h1>
+          <h1>Linguagens e Framework</h1>
           <h2>Minhas habilidades:</h2>
         </div>
-        <div className='experiencia-icons'>
-          <div className='linguagem'><img src={js2}/><h1>JavaScript</h1></div>
-          <div className='linguagem'><img id="html" src={html}/><h1>HTML</h1></div>
-          <div className='linguagem'><img src={css} id="css"/><h1>CSS</h1></div>
-          <div className='linguagem'><img src={react} id="react"/><h1>React</h1></div>
+        <div id='icons-box-container'>
+
+        <div className='icons-box'>
+          <IoLogoHtml5 className='icons'/>
+          <h2>html5</h2>
+        </div>
+          <div className='icons-box'>
+            <IoLogoCss3 className='icons' />
+            <h2>css3</h2>
+          </div>
+          <div className='icons-box'>
+            <RiJavascriptFill className='icons'/>
+            <h2>javascript</h2>
+          </div>
+          <div className='icons-box'>
+            <FaReact className='icons'/>
+            <h2>react</h2>
+          </div>
+          <div className='icons-box'>
+            <IoLogoPython className='icons'/>
+            <h2>python</h2>
+          </div>
+          <div className='icons-box'>
+            <FaGitSquare className= 'icons'/>
+            <h2>git</h2>
+          </div>
+          <div className='icons-box'>
+            <AiTwotoneApi className='icons'/>
+            <h2>api</h2>
+          </div>
+ 
         </div>
       </div>
     </main>

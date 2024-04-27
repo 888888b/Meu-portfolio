@@ -6,6 +6,7 @@
   --color-white-opacity-015: rgb(255,255,255, .15);
   --color-white-opacity-01: rgb(255,255,255,.1);
   --color-white-opacity-08: rgb(255,255,255,.8);
+  --color-white-opacity-09: rgb(255,255,255,.9);
   --color-orange: #FB7E12;
   --color-light-red: #E02352;
 }
@@ -229,22 +230,6 @@ main #div-sobre-text p{
   line-height: 150%;
 }
 
-main #div-sobre-text .skils{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 2rem;
-  row-gap: .5rem;
-  text-transform: uppercase;
-}
-
-main #div-sobre-text .skils span{
-  color: var(--color-white);
-  font: 500 1.1em 'Poppins', sans-serif;
-  padding: 0px 0px 3px 0px;
-  border-bottom: 1pt solid var(--color-orange);
-}
-
 main #div-sobre-img{
   width: 45%;
   min-width: 300px;
@@ -258,7 +243,6 @@ main #div-sobre-img img{
 
 main .experiencia{
   width: 100%;
-  max-width: 2000px;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
@@ -289,73 +273,37 @@ main .experiencia-text h2{
   font: 600 1.4em arial, sans-serif;
 }
 
-main .experiencia-icons{
+main #icons-box-container{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 3rem;
+  gap: 30px;
 }
 
-main .linguagem{
+main #icons-box-container .icons{
+  color: var(--color-light-red);
+  font-size: 60px;
+}
+
+main .icons-box{
   display: flex;
-  border-radius: 10px;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
-  row-gap: 1rem;
-  height: 130px;
-  position: relative;
+  row-gap: 0.8rem;
 }
 
-main .linguagem h1{
-  background: linear-gradient(to right, var(--color-orange), var(--color-light-red));
-  font: 600 1.5em arial, sans-serif;
-  -webkit-background-clip: text;
-  color: transparent;
-  border-bottom: 3px solid transparent;
-  padding: 10px 3px 5px 3px;
-  transition: all .2s linear;
-  position: absolute;
-  bottom: -20px;
-}
-
-main .linguagem h1::before{
-  content: '';
-  width: 0%;
-  height: 100%;
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  transition: all .3s ease-in-out;
-  border-bottom: 1.8pt solid var(--color-white);
-}
-
-main .linguagem:hover h1::before{
-  width: 100%;
-}
-
-main .linguagem img{
-  width: 85px;
-  height: 85px;
-  border-radius: 8px;
-}
-
-main #react{
-  width: 120px;
-}
-
-main #css{
-  width: 105px;
-  height: 105px;
+main .icons-box h2{
+  color: var(--color-white-opacity-09);
+  font: 400 16px 'Poppins', sans-serif;
+  text-transform: uppercase;
 }
 
 footer{
   width: 95%;
   border-radius: 5px;
   margin: auto;
-  padding: 40px 30px;
+  padding: 30px 30px;
   box-sizing: border-box;
   display: flex;
   flex-direction: row;
@@ -403,8 +351,15 @@ footer #footer-icons a:hover{
   overflow-x: hidden;
 }
 
+.carrosel-app .swiper-wrapper{
+  max-width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 .carrosel-app .control-slides{
-  max-width: 30vw;
+  max-width: 27vw;
   padding: 20px 7px 10px 7px;
   margin: auto;
   padding: 10px;
@@ -440,16 +395,16 @@ footer #footer-icons a:hover{
 .carrosel-app .slide-link-button #indent-content{
   display: flex;
   flex-direction: column;
-  row-gap: 1rem;
-  border-left: 1pt solid rgb(255,255,255,.8);
+  row-gap: 2rem;
+  border-left: 1.5pt solid rgb(255,255,255,.7);
   margin-left: 25px;
   padding: 9px 0px 9px 10px;
   margin-bottom: 15px;
 }
 
-.carrosel-app .slide-link-button #indent-content h3{
-  color: rgb(255,255,255,.8);
-  font: 500 1em 'Poppins', helvetica, sans-serif;
+.carrosel-app .slide-link-button #indent-content p{
+  color: rgb(255,255,255,.9);
+  font: 400 1em 'Poppins', helvetica, sans-serif;
 }
 
 .carrosel-app .slide-link-button #indent-content #tecnologies{
@@ -470,7 +425,7 @@ footer #footer-icons a:hover{
   padding: 5px 40px;
   color: black;
   border-radius: 5px;
-  font: 600 1.1em 'Poppins', serif;
+  font: 600 1.05em 'Poppins', serif;
   cursor: pointer;
   background-color: var(--color-white);
   text-decoration: none;
@@ -576,43 +531,68 @@ footer #footer-icons a:hover{
   transition: transform .3s ease-in-out;
 }
 
-@media screen and (max-width: 1050px) {
-
-  .container-links a{
-    font-size: 1.9em
+@media screen and (max-width: 1500px) {
+  .carrosel-app .control-slides{
+    max-width: 35vw;
   }
 
-  .header-container h1{
+  header .header-container h1{
     font-size: 2em;
   }
 
-  #div-titulo-text h2{
+  header .header-container a{
+    font-size: 1.8em;
+  }
+
+  main #div-titulo-text a{
+    font-size: 1.2em;
+  }
+  main #div-sobre-text h2{
     font-size: 1.3em;
   }
 
-  #div-titulo-text h1{
-    font-size: 3.1em;
+  main #div-sobre-text h1{
+    font-size: 2.3em;
   }
 
-  #div-titulo-text a{
-    font-size: 1.5em; 
+  main #div-sobre-text p{
+    font-size: 1.1em;
+  }
+  main .experiencia-text h1{
+    font-size: 2.3em;
+  }
+  main .experiencia-text h2{
+    font-size: 1.25em;
+  }
+  .carrosel-app h1{
+    font-size: 1.8em;
+  }
+  footer p{
+    font-size: 1.8em;
+  }
+  footer #footer-icons a{
+    font-size: 1.8em;
   }
 
-  #img-div{
-    width: 280px;
-    height: 280px;
+}
+
+@media screen and (max-width: 1050px) {
+  main #div-titulo-text h2{
+    font-size: 1.2em;
+  }
+  main #div-titulo-text h1{
+    font-size: 2.9em;
+  }
+  main #div-titulo-text a{
+    font-size: 1.1em;
   }
 
-  #div-sobre-text h2{
-    font-size: 1.5em;
+  main #img-div{
+    width: 260px;
+    height: 260px;
   }
-
-  #div-sobre-text p{
-    font-size: 1.10em;
-  }
-
-  #div-sobre-text h1{
-    font-size: 2.5em;
+  .carrosel-app .control-slides{
+    max-width: 40vw;
   }
 
   footer{
@@ -624,74 +604,98 @@ footer #footer-icons a:hover{
   }
 
   footer p{
-    font-size: 2em;
-  }
-
-  #footer-icons a{
-    font-size: 2em; 
+    font-size: 1.7em;
   }
 }
 
 @media screen and (max-width: 930px){
-
-  .div-titulo-sobre{
+  main .div-titulo-sobre{
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column-reverse !important;
     align-items: center;
   }
 
-  #div-titulo-text{
+  main #div-titulo-text{
+    width: 100% !important;
+  }
+
+  main #div-titulo-text > * {
+    margin: auto;
+    text-align: center;
+  }
+
+  main #div-sobre-text a{
+    font-size: 1.1em;
+    padding: 10px 50px;
+  }
+
+  main #div-sobre-img{
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+  }
+  main #div-sobre-img img{
+    object-fit: cover;
+    object-position: center;
+  }
+  main #img-div{
+    width: 250px;
+    height: 250px;
+  }
+
+  main .div-sobre{
+    display: flex !important;
+    flex-direction: column !important;
+    padding-left: 0;
+  }
+
+  main .div-sobre #div-sobre-text{
     width: 100%;
   }
 
-  #div-titulo-text h1{
-    font-size: 3.1em;
-  }
-
-  #div-titulo-text h2{
+  main #div-sobre-text h2{
     font-size: 1.3em;
   }
 
-  #div-titulo-text a{
+  main #div-sobre-text h1{
+    font-size: 2.2em;
+  }
+
+  main #div-sobre-text p{
+    font-size: 1.05em;
+    text-align: justify !important;
+    max-width: 95%;
+  }
+
+  main .div-sobre #div-sobre-text > * {
+    margin: auto;
+    text-align: center;
+  }
+
+  main .experiencia-text h1{
+    font-size: 2.3em;
+  }
+  main .experiencia-text h2{
+    font-size: 1.15em;
+  }
+
+  .carrosel-app h1{
+    font-size: 1.75em;
+  }
+
+  footer p{
     font-size: 1.5em;
-  }
-
-  #img-div{
-    width: 270px;
-    height: 270px;
-  }
-
-  #div-sobre-text h1{
-    font-size: 2.6em;
-  }
-
-  .linguagem img{
-    width: 80px;
-    height: 80px;
-  }
-
-  #react{
-    width: 100px;
-  }
-
-  #css{
-    width: 85px;
-    height: 85px;
   }
 }
 
 @media screen and (max-width: 730px){
-
-}
-
-@media screen and (max-width: 550px){
   header .header-container{
     flex-direction: column;
     align-items: flex-start;
   }
 
   header .header-container h1{
-    font-size: 1.95em;
+    font-size: 1.8em;
   }
 
   header .header-container .container-links{
@@ -700,19 +704,37 @@ footer #footer-icons a:hover{
     padding: 5px 0px;
     margin: auto;
   }
-
+  header .header-container .container-links{
+    margin-top: 10px;
+  }
   header .header-container .container-links a{
     font-size: 1.9em;
   }
 
-  main .div-titulo-sobre{
-    flex-direction: column-reverse;
+  main #div-titulo-text{
+    row-gap: 1.5rem;
+  }
+
+  main #div-titulo-text a{
+    margin-top: 0;
   }
 
   main #div-titulo-text{
     width: 100%;
     padding: 20px 0px;
     align-items: flex-start;
+  }
+
+  main #div-sobre-text h2{
+    font-size: 2.2em;
+  }
+
+  main #div-sobre-text h1{
+    font-size: 2.2em;
+  }
+
+  main #div-sobre-text p{
+    font-size: 1.05em;
   }
 
   main #img-div{
@@ -725,7 +747,7 @@ footer #footer-icons a:hover{
   }
 
   main #div-titulo-text h2{
-    font-size: 1.25em;
+    font-size: 1.1em;
   }
   
   main #div-titulo-text h1{
@@ -735,7 +757,6 @@ footer #footer-icons a:hover{
   main #div-titulo-text a{
     padding: 5px 25px;
     font-size: 1.2em;
-    margin: 0;
   }
 
   main .div-sobre{
@@ -750,15 +771,16 @@ footer #footer-icons a:hover{
   }
 
   main #div-sobre-text h2{
-    font-size: 1.45em;
+    font-size: 1.3em;
   }
 
   main #div-sobre-text h1{
-    font-size: 2.35em;
+    font-size: 2.2em;
   }
 
   main #div-sobre-text p{
-    font-size: 1.15em;
+    font-size: 1.1em;
+    text-align: justify !important;
   }
 
   main #div-sobre-img{
@@ -772,41 +794,8 @@ footer #footer-icons a:hover{
   }
 
   main .experiencia-text h2{
-    font-size: 1.3em;
+    font-size: 1.2em;
   }
-
-  main .experiencia-icons{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
-
-  main .linguagem{
-    height: 90px;
-  }
-
-  main .linguagem img{
-    width: 60px;
-    height: 60px;
-    object-fit: inherit;
-  }
-
-  main .linguagem #react{
-    width: 70px;
-    height: 60px;
-  }
-
-  main .linguagem #css{
-    width: 65px;
-    height: 65px;
-  }
-
-  main .linguagem h1{
-    font-size: 1.3em;
-  }
-
   .carrosel-app{
     width: 100%;
     padding: 0px 10px;
@@ -848,6 +837,10 @@ footer #footer-icons a:hover{
 
   .carrosel-app .slide-link-button .link-buttons a{
     text-align: center;
+  }
+
+  main #icons-box-container .icons{
+    font-size: 45px;
   }
 
   footer{

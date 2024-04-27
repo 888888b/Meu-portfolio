@@ -6,7 +6,7 @@ import 'aos/dist/aos.css';
 
 function Cabeça(){
   AOS.init({
-    duration: 1000
+    duration: 900
   },[]);
   return(
     <header data-aos="fade-down" data-aos-delay="300">
