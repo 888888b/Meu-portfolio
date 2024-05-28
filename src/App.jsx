@@ -1,13 +1,12 @@
-import Cabeça from "./Header";
-import Main from "./Main";
-import Footer from "./Footer";
-import Carrosel from "./carrosel";
-
-import './App.css'
+import Cabeça from "./components/Header";
+import Main from "./components/Main";
+import Footer from "./components/Footer";
+import Carrosel from "./components/Projects";
+import './styles/App.css';
 
 export default function App() {
   return (
-    <main className="main-app">
+    <main className="app-container">
       <Cabeça/>
       <Main/>
       <Carrosel/>
