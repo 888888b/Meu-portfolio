@@ -10,14 +10,15 @@ import AOS from "aos";
 import 'aos/dist/aos.css';
 import { SlArrowLeft, SlArrowRight } from "react-icons/sl";
 import { Swiper, SwiperSlide } from './Swiper.jsx';
+import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 
 const myProjects = [{
   linkDeploy: "https://plataforma-filmes-three.vercel.app/",
   linkGit: "https://github.com/888888b/Plataforma_filmes",
   img: ZilloCine,
   title: 'ZilloCine',
-  tecnologies: [['React'], ['HTML e CSS'], ["JavaScript"], ["API"]],
-  about: 'ZilloCine é uma plataforma de filmes que desenvolvi com o objetivo de oferecer aos usuários uma interface intuitiva e um design agradável. A plataforma conta com seis páginas principais: Home, Filmes, Séries, Conta, Player e Login. Utilizando uma API, o ZilloCine fornece todas as informações necessárias sobre os filmes disponíveis. Ao longo do desenvolvimento do project, tive a oportunidade de aprimorar minhas habilidades em diversas áreas, como design, lógica de programação, uso de APIs e desenvolvimento com React.',
+  tecnologies: [['React'], ['HTML'], ['CSS'],["JavaScript"], ["API"]],
+  about: 'ZilloCine é uma plataforma de filmes que desenvolvi com o objetivo de oferecer aos usuários uma interface intuitiva e um design agradável. A plataforma conta com seis páginas principais: Home, Filmes, Séries, Conta, Player e Login. Utilizando uma API, o ZilloCine fornece todas as informações necessárias sobre os filmes disponíveis. Ao longo do desenvolvimento do projeto, tive a oportunidade de aprimorar minhas habilidades em diversas áreas, como design, lógica de programação, uso de APIs e desenvolvimento com React.',
   conclusion: "A criação do ZilloCine teve um impacto significativo no meu progresso como desenvolvedor web, permitindo-me ganhar experiência prática e enfrentar diversos desafios técnicos.",
   id: 'ZilloCine'
   },{
@@ -25,46 +26,19 @@ const myProjects = [{
     linkGit: "https://github.com/888888b/Login_page",
     img: LoginPage,
     title: "Pagina de Login",
-    tecnologies: [["HTML e CSS"], ["JavaScript"], ['React']],
-    about: 'Página de login desenvolvida por com o objetivo de aprimorar e expandir meus conhecimentos na criação de aplicações que integram sistemas externos.',
+    tecnologies: [['React'], ["HTML"], ['CSS'], ["JavaScript"]],
+    about: 'Página de login desenvolvida com o objetivo de aprimorar e expandir meus conhecimentos na criação de aplicações que integram sistemas externos. O cadastro e login são feitos através do Firebase, e os dados do usuário podem ser vistos na página do perfil.',
     conclusion: "O desenvolvimento deste projeto me proporcionou aprimorar minhas habilidades de lógica de programação e integração com APIs.",
-    id: 'LoginPage'
+    id: 'Pagina de Login'
     }, {
     linkDeploy: "https://calculadora-react-rho-six.vercel.app/",
     linkGit: "https://github.com/888888b/Calculadora-react",
     img: CalculatorApp,
     title: "Calculadora",
-    tecnologies: [["REACT"], ["HTML e CSS"], ["JavaScript"]],
-    about: '',
-    conclusion: "Calculadora responsiva e funcional feita com react.js",
+    tecnologies: [["REACT"], ["HTML"], ['CSS'],["JavaScript"]],
+    about: 'Calculadora web que pode realizar cálculos básicos como adição, subtração, divisão, multiplicação, raiz quadrada, potência, entre outros. O projeto também conta com um design agradável e responsivo.',
+    conclusion: "Sendo um dos primeiros projetos que criei utilizando React, o desenvolvimento desta calculadora foi essencial para o meu avanço em lógica de programação e tratamento de dados.",
     id: 'CalculatorApp'
-  },{
-  linkDeploy: "https://buscadordecep-lyart.vercel.app/",
-  linkGit: "https://github.com/888888b/Buscador-de-CEP",
-  img: CepPage,
-  title: "Buscador de CEP",
-  tecnologies: [["REACT"], ["HTML e CSS"], ["JavaScript"],["API"]],
-  about: '',
-  conclusion: "Aplicação que busca informações de endereço atraves de uma api usando CEP",
-  id: 'CepPage'
-  }, {
-  linkDeploy: "https://888888b.github.io/Landing-page-barbearia/",
-  linkGit: "https://github.com/888888b/Landing-page-barbearia",
-  img: LandingPage,
-  title: "Landing Page",
-  tecnologies: ["HTML e CSS"],
-  about: '',
-  conclusion: "Landing-page HTML para uma Barbearia",
-  id: 'LandingPage'
-  }, {
-  linkDeploy: "https://888888b.github.io/Pagina-Formulario/",
-  linkGit: "https://github.com/888888b/Pagina-Formulario",
-  img: FormPage,
-  title: "Formulario",
-  tecnologies: ["HTML e CSS"],
-  about: '',
-  conclusion: "Formulario responsivo feito em HTML",
-  id: 'FormPage'
   }
 ];
 
@@ -144,20 +118,19 @@ function Carrosel(){
 
   return authorized ?(
     <section className="projects-container" data-aos="fade-up" data-aos-delay="300">
-      <h1>Meus projects</h1>
+      <h1>Meus projetos</h1>
         <section className="swiper-container">
   
           <button className="swiper-btns-control btn-left"><SlArrowLeft onClick={() => {handleSwiperControl('prev')}} className="arrows"/></button>
           <button className="swiper-btns-control btn-right"><SlArrowRight onClick={() => {handleSwiperControl('next')}} className="arrows"/></button>
           
-          <Swiper className='swiper' breakpoints={breakpoints} swiperRef={setSwiperRef}>
+          <Swiper className='swiper' breakpoints={breakpoints} loop={true} swiperRef={setSwiperRef}>
               {myProjects.map( (project, index) => (
                 <SwiperSlide>
                   <div ref={(e) => {projectsRef.current[index] = e}} className="project-slide">
 
-                    <div className="images-img" id="swiper-img">
+                    <div className="project-img">
                       <img id={project.id} src={project.img}/>
-                      <div className="img-gradient"></div>
                     </div>
 
                     <section className="slides-info">
@@ -183,8 +156,17 @@ function Carrosel(){
                       </div>
 
                       <div className="link-buttons">
-                        <a target="_blank" href={project.linkDeploy}>Pagina</a>
-                        <a target="_blank" href={project.linkGit}>Codigo</a>
+
+                        <a target="_blank" href={project.linkDeploy}>
+                          Pagina
+                          <FaArrowUpRightFromSquare className='arrow-up-icon'/>
+                        </a>
+
+                        <a target="_blank" href={project.linkGit}>
+                          Codigo
+                          <FaArrowUpRightFromSquare className='arrow-up-icon'/>
+                        </a>
+
                       </div>
                     </section>
                   </div>

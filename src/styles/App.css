@@ -24,6 +24,7 @@
   --white-opacity-02: rgb(255,255,255, 0.2);
   --white-opacity-015: rgb(255,255,255, 0.15);
   --white-opacity-01: rgb(255,255,255, 0.1);
+  --white-opacity-00: rgb(255,255,255, 0.0);
   --color-orange: #FB7E12;
   --color-light-red: #E02352;
 }
@@ -76,7 +77,7 @@ header .header-content{
 }
 
 header .header-content h1{
-  font: 600 2.2em 'Poppins', arial, sans-serif;
+  font: 600 32px 'Poppins', arial, sans-serif;
   -webkit-background-clip: text;
   background-image: linear-gradient(to right, var(--color-orange), var(--color-light-red));
   color: transparent;
@@ -104,11 +105,11 @@ header .header-content h1:hover::before{
 header .header-links{
   display: flex;
   flex-direction: row;
-  gap: 2.5rem;
+  gap: 40px;
 }
 
 header .header-links a{
-  font-size: 2em;
+  font-size: 30px;
   color: var(--white);
   transition: transform .2s ease-in-out;
 }
@@ -150,7 +151,7 @@ header .header-links a:hover{
 }
 
 .profile-container .intro-title h2{
-  font: 500 1.35em arial, sans-serif;
+  font: 400 21.5px 'Roboto', helvetica, arial, sans-serif;
   color: var(--white);
 }
 
@@ -160,7 +161,7 @@ header .header-links a:hover{
 }
 
 .profile-container .intro-title h1{
-  font: 700 3.3em 'Poppins', arial, sans-serif;
+  font: 800 55px 'Raleway', helvetica, sans-serif;
   background: linear-gradient(to right, var(--color-orange), var(--color-light-red));
   -webkit-background-clip: text;
   color: transparent;
@@ -169,12 +170,12 @@ header .header-links a:hover{
 
 .profile-container .intro-title a{
   text-decoration: none;
-  padding: 8px 30px;
-  font: 500 1.3em 'Poppins', arial, sans-serif;
+  padding: 9px 35px;
+  font: 600 21px 'Raleway', helvetica, sans-serif;
   color: var(--white);
   border-radius: 5px;
-  background: linear-gradient(to right, var(--color-orange), var(--color-light-red));
   margin-top: 20px;
+  background: linear-gradient(to right, var(--color-orange), var(--color-light-red));
   border: none;
   transition: all .2s linear;
 }
@@ -226,27 +227,28 @@ header .header-links a:hover{
   padding: 40px 25px;
   display: flex;
   flex-direction: column;
-  row-gap: 24px;
   justify-content: center;
   box-sizing: border-box;
 }
 
 .profile-container .about-me h2{
-  font: 600 24px 'Poppins', arial, sans-serif;
+  font: 600 21px 'Poppins', arial, sans-serif;
   color: var(--color-orange);
 }
 
 .profile-container .about-me h1{
-  font: 600 2.7em 'Poppins', arial, sans-serif;
+  font: 600 36px 'Poppins', helvetica, sans-serif;
   max-width: 90%;
+  margin-top: 5px;
+  margin-bottom: 24px;
   color: var(--white);
 }
 
 .profile-container .about-me p{
-  max-width: 90%;
-  font: 500 1.2em 'Montserrat', sans-serif;
+  max-width: 95%;
+  font: 400 18px 'Noto Sans', helvetica, sans-serif;
   color: var(--white);
-  line-height: 150%;
+  line-height: 170%;
 }
 
 .profile-container .about-img{
@@ -275,12 +277,12 @@ header .header-links a:hover{
   display: flex;
   align-items: center;
   flex-direction: column;
-  row-gap: 1rem;
+  row-gap: 5px;
 }
 
 .profile-container .title-box h1{
   background: linear-gradient(to right, var(--color-orange), var(--color-light-red));
-  font: 600 2.5em arial, sans-serif;
+  font: 600 36px 'Poppins','Roboto', helvetica, sans-serif;
   -webkit-background-clip: text;
   color: transparent;
   text-align: center;
@@ -289,7 +291,7 @@ header .header-links a:hover{
 .profile-container .title-box h2{
   color: var(--white);
   text-align: center;
-  font: 600 1.4em arial, sans-serif;
+  font: 500 20px 'Poppins', 'Roboto', helvetica, sans-serif;
 }
 
 .profile-container .languages-container{
@@ -334,17 +336,17 @@ footer{
 footer p{
   background: linear-gradient(to right, var(--color-orange), var(--color-light-red));
   -webkit-background-clip: text;
-  font: 600 2em arial, sans-serif;
+  font: 600 29px arial, sans-serif;
   color: transparent;
 }
 
 footer #footer-icons{
   display: flex;
-  gap: 2rem;
+  gap: 40px;
 }
 
 footer #footer-icons a{
-  font-size: 2em;
+  font-size: 30px;
   color: var(--white);
   transition: transform .2s ease-in-out;
 }
@@ -362,6 +364,33 @@ footer #footer-icons a:hover{
   row-gap: 45px;
   overflow: hidden;
   box-sizing: border-box;
+}
+
+.projects-container h1{
+  display: inline-block;
+  width: fit-content;
+  margin: auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(to right, var(--color-orange), var(--color-light-red));
+  padding: 15px 30px;
+  border-radius: 5px;
+  text-align: center;
+  font: 600 29px 'Poppins','Roboto', helvetica, sans-serif;
+  position: relative;
+  z-index: 1;
+}
+
+.projects-container h1::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  background-image: linear-gradient(to right, var(--white-opacity-015), var(--white-opacity-01));
+  z-index: -1;
 }
 
 .projects-container .swiper-container{
@@ -428,6 +457,25 @@ footer #footer-icons a:hover{
   background-image: linear-gradient(to right, var(--white-opacity-015), var(--white-opacity-01));
 }
 
+.projects-container .project-img{
+  width: 100%;
+  margin: auto;
+  max-height: 50vh;
+  border: 1pt solid var(--white-opacity-02);
+  overflow: hidden;
+  border-radius: 5px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.projects-container .project-img img{
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  transition: transform .3s ease-in-out;
+}
+
 .projects-container .slides-info{
   width: 100%;
   display: flex;
@@ -447,7 +495,6 @@ footer #footer-icons a:hover{
   justify-content: space-between;
   padding: 0px 10px;
   box-sizing: border-box;
-  height: max-content;
   height: max-content;
   position: absolute;
   left: 0;
@@ -505,11 +552,19 @@ footer #footer-icons a:hover{
 .projects-container .link-buttons a{
   padding: 6px 60px;
   color: var(--white);
-  border-radius: 5px;
+  border-radius: 4px;
   font: 500 18px 'Poppins', 'Roboto', sans-serif;
   cursor: pointer;
   background-color: var(--color-light-red);
   text-decoration: none;
+  position: relative;
+}
+
+.projects-container a .arrow-up-icon{
+  font-size: 16px;
+  position: absolute;
+  right: 3px;
+  top: 3px;
 }
 
 .projects-container #swiper-img img{
@@ -520,99 +575,7 @@ footer #footer-icons a:hover{
   object-fit: cover;
 }
 
-.projects-container .img-gradient{
-  height: 10%;
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-  z-index: 1;
-  background-image: linear-gradient(to top, var(--black), transparent);
-}
-
-.projects-container .swiper-button-next, .swiper-button-prev{
-  color: var(--white) !important;
-  transform: scale(.7);
-}
-
-.projects-container .swiper-button-next::before, .swiper-button-prev::before{
-  content: '';
-  width: 200px;
-  min-height: 150vh;
-  position: absolute;
-  z-index: -1;
-};
-
-.projects-container .swiper-button-next{
-  margin-right: -5px;
-}
-
-.projects-container .swiper-button-prev{
-  margin-left: -5px;
-}
-
-.projects-container .swiper-button-next::before{
-  position: absolute;
-  background-image: linear-gradient(to left, var(--black), var(--black), transparent);
-}
-
-.projects-container .swiper-button-prev::before{
-  background-image: linear-gradient(to right, var(--black), var(--black), transparent);
-}
-
-.projects-container h1{
-  display: inline-block;
-  width: fit-content;
-  margin: auto;
-  color: transparent;
-  -webkit-background-clip: text;
-  background-image: linear-gradient(to right, var(--color-orange), var(--color-light-red));
-  padding: 15px 30px;
-  border-radius: 5px;
-  text-align: center;
-  font: 600 2em arial, sans-serif;
-  position: relative;
-  z-index: 1;
-}
-
-.projects-container h1::before{
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 5px;
-  background-image: linear-gradient(to right, var(--white-opacity-015), var(--white-opacity-01));
-  z-index: -1;
-}
-
-.container-carrosel{
-  display: flex;
-  flex-direction: row;
-  gap: 3rem;
-  transform: translateX(0%);
-}
-
-.projects-container .images-img{
-  width: 100%;
-  margin: auto;
-  max-height: 50vh;
-  border: 1pt solid var(--white-opacity-02);
-  overflow: hidden;
-  border-radius: 5px;
-  box-sizing: border-box;
-  position: relative;
-}
-
-.projects-container .images-img img{
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-  border-radius: 5px;
-  transition: transform .3s ease-in-out;
-}
-
-@media screen and (max-width: 1500px) {
+@media screen and (min-width: 1500px) {
 
   header .header-content h1{
     font-size: 2em;
@@ -634,7 +597,7 @@ footer #footer-icons a:hover{
   }
 
   .profile-container .about-me p{
-    font-size: 1.1em;
+    font-size: 17px;
   }
   .profile-container .title-box h1{
     font-size: 2.3em;
@@ -669,6 +632,11 @@ footer #footer-icons a:hover{
     width: 260px;
     height: 260px;
   }
+
+  .projects-container .project-slide{
+    max-width: 100vw;
+  }
+
   .projects-container .project-slide{
     max-width: 40vw;
   }
@@ -740,7 +708,7 @@ footer #footer-icons a:hover{
   }
 
   .profile-container .about-me p{
-    font-size: 1.05em;
+    font-size: 16px;
     text-align: justify !important;
     max-width: 95%;
   }
@@ -767,80 +735,59 @@ footer #footer-icons a:hover{
 }
 
 @media screen and (max-width: 730px){
+  .app-container{
+    padding: 25px 20px;
+  }
+
   header .header-content{
-    flex-direction: column;
+   flex-direction: column;
     align-items: flex-start;
   }
 
   header .header-content h1{
-    font-size: 1.8em;
+    font-size: 28px;
+    margin: auto;
   }
 
   header .header-content .header-links{
     box-sizing: border-box;
-    gap: 2rem;
-    padding: 5px 0px;
     margin: auto;
+    padding: 5px 0px;
   }
+
   header .header-content .header-links{
     margin-top: 10px;
   }
+
   header .header-content .header-links a{
-    font-size: 1.9em;
-  }
-
-  .profile-container .intro-title{
-    row-gap: 1.5rem;
-  }
-
-  .profile-container .intro-title a{
-    margin-top: 0;
+    font-size: 30px;
   }
 
   .profile-container .intro-title{
     width: 100%;
-    padding: 20px 0px;
-    align-items: flex-start;
-  }
-
-  .profile-container .about-me h2{
-    font-size: 2.2em;
-  }
-
-  .profile-container .about-me h1{
-    font-size: 2.2em;
-  }
-
-  .profile-container .about-me p{
-    font-size: 1.05em;
-  }
-
-  .profile-container #img-box{
-    width: 200px;
-    height: 200px;
-  }
-
-  .profile-container .intro-title{
     padding: 20px 10px;
+    align-items: flex-start;
+    row-gap: 24px;
   }
 
   .profile-container .intro-title h2{
-    font-size: 1.1em;
+    font-size: 17.5px;
   }
   
   .profile-container .intro-title h1{
-    font-size: 2.45em;
+    font-size: 40px;
   }
   
   .profile-container .intro-title a{
-    padding: 5px 25px;
-    font-size: 1.2em;
+    padding: 9px 50px;
+    font-size: 19px;
+    margin-top: 0;
   }
 
-  .profile-container .profile-details{
-    flex-direction: column;
-    max-height: 100vh;
-    padding: 0;
+  .projects-container{
+    width: 100%;
+    padding: 0px 10px;
+    row-gap: 2rem;
   }
 
   .profile-container .about-me{
@@ -849,15 +796,16 @@ footer #footer-icons a:hover{
   }
 
   .profile-container .about-me h2{
-    font-size: 1.3em;
+    font-size: 21px;
   }
 
   .profile-container .about-me h1{
-    font-size: 2.2em;
+    font-size: 35px;
   }
 
   .profile-container .about-me p{
-    font-size: 1.1em;
+    font-size: 18px;
+    margin-top: 30px !important;
     text-align: justify !important;
   }
 
@@ -867,69 +815,78 @@ footer #footer-icons a:hover{
     padding: 0px;
   }
 
+  .profile-container #img-box{
+    width: 200px;
+    height: 200px;
+  }
+
+  .profile-container .profile-details{
+    flex-direction: column;
+    max-height: 100vh;
+    padding: 0;
+  }
+  
   .profile-container .title-box h1{
-    font-size: 2.2em;
+    font-size: 35px;
   }
 
   .profile-container .title-box h2{
-    font-size: 1.2em;
+    font-size: 19px;
   }
+
   .projects-container{
-    width: 100%;
-    padding: 0px 10px;
-    row-gap: 2rem;
+    padding: 0;
   }
 
   .projects-container h1{
-    font-size: 1.7em;
+    font-size: 27px;
   }
 
   .projects-container .project-slide{
-    max-width: 80%;
+    width: 100%;
+    max-width: 100vw;
     padding: 5px 10px;
   }
 
-  .projects-container .images-img{
-    height: 180px;
+  .projects-container .slides-info{
+    margin-bottom: 120px;
   }
 
-
-  .projects-container .swiper-button-next{
-    right: -1px;
-    transform: scale(.7);
-  }
-
-  .projects-container .swiper-button-prev{
-    left: -1px;
-    transform: scale(.7);
-  }
-
-  .projects-container .swiper-button-next::before, .swiper-button-prev::before{
+  .projects-container .slides-info .indent-content{
     display: none;
   }
 
   .projects-container .slides-info .link-buttons{
     flex-direction: column;
-    row-gap: 1rem;
+    row-gap: 16px;
   }
 
   .projects-container .slides-info .link-buttons a{
     text-align: center;
+    padding: 9px 0px;
   }
 
   .profile-container .languages-container .icons{
     font-size: 45px;
   }
 
+  .projects-container .swiper-btns-control{
+    display: none;
+  }
+
+  .projects-container .swiper-container::before, .projects-container .swiper-container::after{
+    display: none;
+  }
+
   footer{
     display: flex;
     flex-direction: column;
     padding: 20px 15px;
-    row-gap: 1.5rem;
+    row-gap: 24px;
   }
 
   footer p{
-    font-size: 1.4em;
+    font-size: 25px;
   }
 
   footer #footer-icons{
@@ -937,7 +894,7 @@ footer #footer-icons a:hover{
   }
 
   footer #footer-icons a{
-    font-size: 1.9em;
+    font-size: 30px;
   }
 }
 
