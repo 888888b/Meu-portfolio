@@ -1,15 +1,19 @@
-import React from 'react';
+import { useEffect, React } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram, faGithub, faLinkedin,faWhatsapp } from '@fortawesome/free-brands-svg-icons';
-import AOS from "aos";
+import Aos from "aos";
 import 'aos/dist/aos.css';
 
 function Cabeça(){
-  AOS.init({
-    duration: 900
+
+  useEffect(() => {
+    Aos.init({
+      duration: 300
+    });
   },[]);
+
   return(
-    <header data-aos="fade-down" data-aos-delay="300">
+    <header data-aos="zoom-in-down" data-aos-delay="300">
       <section className="header-content">
         <h1>Vitor</h1>
         <div className="header-links">

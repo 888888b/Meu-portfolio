@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import imgDev from "../images/img-dev.jpg";
 import perfil from '../images/profile.png';
-import AOS from "aos";
+import Aos from "aos";
 import 'aos/dist/aos.css';
 import { IoLogoCss3 } from "react-icons/io";
 import { IoLogoHtml5 } from "react-icons/io";
@@ -13,13 +13,14 @@ import { FaGitSquare } from "react-icons/fa";
 
 function Main(){
   useEffect( () => {
-    AOS.init();
-      duration: 900;
+    Aos.init({
+      duration: 300
+    });
   }, [])
 
   return(
     <section className="profile-container">
-      <section className="profile-intro" data-aos="fade-up" data-aos-delay="300">
+      <section className="profile-intro" data-aos="zoom-in" data-aos-delay="300">
 
         <div className="intro-title">
           <h2>Sou o <span>Vitor Hugo</span></h2>
@@ -28,14 +29,12 @@ function Main(){
         </div>
         
         <div className="intro-img">
-          <div id="img-box">
             <img src={perfil}/>
-          </div>
         </div>
         
       </section>
 
-      <section className="profile-details" data-aos="fade-up">
+      <section className="profile-details" data-aos="zoom-in">
         <div className='about-me'>
           <h2>Sobre min</h2>
           <h1>Estudante de Tecnologia</h1>
@@ -47,7 +46,7 @@ function Main(){
         </div> 
       </section>
 
-      <section className='profile-experience' data-aos="fade-up">
+      <section className='profile-experience' data-aos="zoom-in">
 
         <div className='title-box'>
           <h1>Linguagens e Framework</h1>

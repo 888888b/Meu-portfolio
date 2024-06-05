@@ -1,12 +1,15 @@
-import react from "react";
+import { useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram, faGithub, faWhatsapp, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import AOS from "aos";
+import Aos from 'aos';
 import 'aos/dist/aos.css';
 
 function Footer(){
-  AOS.init({
-    duration: 300
+
+  useEffect(() => {
+    Aos.init({
+      duration: 300
+    });
   },[]);
 
   return(

@@ -1,12 +1,9 @@
 import '../styles/App.css';
 import { useState, useRef, useEffect } from "react";
-import LandingPage from "../images/LandingPage.png";
-import FormPage from "../images/FormPage.png";
-import CepPage from "../images/CepPage.png";
 import CalculatorApp from "../images/CalculatorApp.png";
 import ZilloCine from '../images/ZilloCine.png';
 import LoginPage from "../images/login-page.png";
-import AOS from "aos";
+import Aos from "aos";
 import 'aos/dist/aos.css';
 import { SlArrowLeft, SlArrowRight } from "react-icons/sl";
 import { Swiper, SwiperSlide } from './Swiper.jsx';
@@ -46,19 +43,16 @@ function Carrosel(){
   const [authorized, setAuthorized] = useState(false);
   const [swiperRef, setSwiperRef] = useState(undefined);
   const projectsRef = useRef([]);
+  const [pageWidth, setPageWidth] = useState(window.innerWidth);
 
   const breakpoints = {
     1:{
-      slidesPerView: 1
+      slidesPerView: 1,
+      spaceBetween: 0
     },
-    1500:{
-      slidesPerView: 2
-    },
-    2000:{
-      slidesPerView: 3
-    },
-    2000:{
-      slidesPerView: 4
+    1700:{
+      slidesPerView: 2,
+      spaceBetween: 30
     }
   };
 
@@ -96,10 +90,18 @@ function Carrosel(){
       setTimeout(equalizeHeight, 500);
     }
   };
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > pageWidth){
+      equalizeHeight();
+      setPageWidth(window.innerWidth);
+    }
+  });
   
   useEffect( () => {
-    AOS.init();
-    duration: 900;
+    Aos.init({
+      duration: 300
+    });
 
     setAuthorized(true);
 
@@ -117,7 +119,7 @@ function Carrosel(){
   };
 
   return authorized ?(
-    <section className="projects-container" data-aos="fade-up" data-aos-delay="300">
+    <section className="projects-container" data-aos="zoom-in-up" data-aos-delay="300">
       <h1>Meus projetos</h1>
         <section className="swiper-container">
   
@@ -127,49 +129,42 @@ function Carrosel(){
           <Swiper className='swiper' breakpoints={breakpoints} loop={true} swiperRef={setSwiperRef}>
               {myProjects.map( (project, index) => (
                 <SwiperSlide>
-                  <div ref={(e) => {projectsRef.current[index] = e}} className="project-slide">
-
-                    <div className="project-img">
-                      <img id={project.id} src={project.img}/>
+                  <section className='slides-container'>
+                    <div ref={(e) => {projectsRef.current[index] = e}} className="project-slide">
+                      <div className="project-img">
+                        <img id={project.id} src={project.img}/>
+                      </div>
+                      <section className="slides-info">
+                        <h2>{project.title}</h2>
+                        <div className="indent-content">
+                          <div className='about-project about'>
+                            <h3>Sobre</h3>
+                            <p>{project.about}</p>
+                          </div>
+                          <div className='about-project conclusion'>
+                            <h3>Conclusão</h3>
+                            <p>{project.conclusion}</p>
+                          </div>
+                          <div id="tecnologies">
+                            {project.tecnologies.map(tecnology => (
+                              <h4>{tecnology}</h4>
+                            ))}
+                          </div>
+                        </div>
+                      </section>
                     </div>
 
-                    <section className="slides-info">
-                      <h2>{project.title}</h2>
-
-                      <div className="indent-content">
-
-                        <div className='about-project about'>
-                          <h3>Sobre</h3>
-                          <p>{project.about}</p>
-                        </div>
-
-                        <div className='about-project conclusion'>
-                          <h3>Conclusão</h3>
-                          <p>{project.conclusion}</p>
-                        </div>
-
-                        <div id="tecnologies">
-                          {project.tecnologies.map(tecnology => (
-                            <h4>{tecnology}</h4>
-                          ))}
-                        </div>
-                      </div>
-
-                      <div className="link-buttons">
-
-                        <a target="_blank" href={project.linkDeploy}>
-                          Pagina
-                          <FaArrowUpRightFromSquare className='arrow-up-icon'/>
-                        </a>
-
-                        <a target="_blank" href={project.linkGit}>
-                          Codigo
-                          <FaArrowUpRightFromSquare className='arrow-up-icon'/>
-                        </a>
-
-                      </div>
-                    </section>
-                  </div>
+                    <div className="link-buttons">
+                          <a target="_blank" href={project.linkDeploy}>
+                            Pagina
+                            <FaArrowUpRightFromSquare className='arrow-up-icon'/>
+                          </a>
+                          <a target="_blank" href={project.linkGit}>
+                            Codigo
+                            <FaArrowUpRightFromSquare className='arrow-up-icon'/>
+                          </a>
+                    </div>
+                  </section>
                 </SwiperSlide>
                 ))}
             <div className="swiper-button-prev"></div>
