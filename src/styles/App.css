@@ -501,7 +501,7 @@ footer #footer-icons a:hover{
   row-gap: 30px;
   border-left: 1.5pt solid var(--white-opacity-07);
   margin-left: 25px;
-  padding: 10px 0px 10px 10px;
+  padding: 10px 10px;
 }
 
 .projects-container .about-project{
@@ -518,6 +518,7 @@ footer #footer-icons a:hover{
 .projects-container .slides-info .indent-content p{
   color: var(--white-opacity-09);
   padding-left: 20px;
+  text-align: justify;
   line-height: 150% !important;
   font: 400 17px 'Noto Sans', 'Poppins', helvetica, sans-serif;
 }
@@ -636,6 +637,10 @@ footer #footer-icons a:hover{
     font-size: 22.5px;
   }
 
+  .projects-container .slides-info .indent-content{
+    padding: 10px 40px 10px 10px;
+  }
+
   .projects-container .slides-info .indent-content p{
     font-size: 21px;
   }
@@ -752,23 +757,67 @@ footer #footer-icons a:hover{
 }
 
 @media screen and (max-width: 1050px) {
-  .profile-container .intro-title h2{
-    font-size: 1.2em;
-  }
-  .profile-container .intro-title h1{
-    font-size: 2.9em;
-  }
-  .profile-container .intro-title a{
-    font-size: 1.1em;
+
+  header .header-content h1{
+    font-size: 29px;
   }
 
-  .profile-container #img-box{
-    width: 260px;
-    height: 260px;
+  header .header-links a{
+    font-size: 27px;
+  }
+
+  .profile-container .intro-title h2{
+    font-size: 19px;
+  }
+  .profile-container .intro-title h1{
+    font-size: 51px;
+  }
+  .profile-container .intro-title a{
+    font-size: 19px;
+  }
+
+  .profile-container .intro-img img{
+    width: 410px;
   }
 
   .projects-container .slides-container{
     width: 90%;
+  }
+
+  .profile-container .about-me h2{
+    font-size: 19px;
+  }
+
+  .profile-container .about-me h1{
+    font-size: 33px;
+  }
+
+  .profile-container .about-me p{
+    font-size: 17px;
+  }
+
+  .profile-container .title-box h1{
+    font-size: 33px;
+  }
+
+  .profile-container .title-box h2{
+    font-size: 19px;
+  }
+
+  .profile-container .languages-container .icons{
+    font-size: 55px;
+  }
+
+  .projects-container h1{
+    font-size: 27px;
+  }
+
+  .projects-container .slides-info h2{
+    font-size: 22px;
+  }
+
+  .projects-container .link-buttons a{
+    font-size: 17px;
   }
 
   footer{
@@ -780,11 +829,16 @@ footer #footer-icons a:hover{
   }
 
   footer p{
-    font-size: 1.7em;
+    font-size: 27px;
+  }
+
+  footer #footer-icons a{
+    font-size: 28px;
   }
 }
 
 @media screen and (max-width: 930px){
+
   .profile-container .profile-intro{
     display: flex;
     flex-direction: column-reverse !important;
@@ -793,6 +847,7 @@ footer #footer-icons a:hover{
 
   .profile-container .intro-title{
     width: 100% !important;
+    row-gap: 20px;
   }
 
   .profile-container .intro-title > * {
@@ -800,23 +855,22 @@ footer #footer-icons a:hover{
     text-align: center;
   }
 
-  .profile-container .about-me a{
-    font-size: 1.1em;
+  .profile-container .intro-title a{
     padding: 10px 50px;
+    margin: 0 auto;
+  }
+
+  .profile-container .about-me{
+    row-gap: 20px;
   }
 
   .profile-container .about-img{
     width: 100%;
-    height: 300px;
     overflow: hidden;
   }
   .profile-container .about-img img{
     object-fit: cover;
     object-position: center;
-  }
-  .profile-container #img-box{
-    width: 250px;
-    height: 250px;
   }
 
   .profile-container .profile-details{
@@ -884,17 +938,21 @@ footer #footer-icons a:hover{
   }
 
   header .header-content .header-links a{
-    font-size: 29px;
+    font-size: 28px;
   }
 
   header .header-content a:hover{
     transform: none;
   }
 
+  .profile-container .profile-intro{
+    padding: 0;
+  }
+
   .profile-container .intro-title{
     width: 100%;
     padding: 20px 10px;
-    align-items: flex-start;
+    align-items: center;
     row-gap: 24px;
   }
 
@@ -903,7 +961,7 @@ footer #footer-icons a:hover{
   }
   
   .profile-container .intro-title h1{
-    font-size: 40px;
+    font-size: 45px;
   }
   
   .profile-container .intro-title a{
@@ -913,23 +971,19 @@ footer #footer-icons a:hover{
   }
 
   .profile-container .intro-img img{
-    width: 100%;
+    width: min(350px , 100%);
   }
 
   .projects-container{
     width: 100%;
     padding: 0px 10px;
-    row-gap: 2rem;
+    row-gap: 30px;
   }
 
   .profile-container .about-me{
     width: 100%;
     row-gap: 16px;
     padding: 10px 10px 25px 10px;
-  }
-
-  .profile-container .about-me h2{
-    font-size: 19px;
   }
 
   .profile-container .about-me h1{
@@ -947,11 +1001,6 @@ footer #footer-icons a:hover{
     padding: 0px;
   }
 
-  .profile-container #img-box{
-    width: 200px;
-    height: 200px;
-  }
-
   .profile-container .profile-details{
     flex-direction: column;
     max-height: 100vh;
@@ -960,10 +1009,6 @@ footer #footer-icons a:hover{
   
   .profile-container .title-box h1{
     font-size: 32px;
-  }
-
-  .profile-container .title-box h2{
-    font-size: 19px;
   }
 
   .profile-container .languages-container .icons{
@@ -1022,7 +1067,6 @@ footer #footer-icons a:hover{
 
   footer p{
     font-size: 25px;
-    font-weight: 500;
   }
 
   footer #footer-icons{
@@ -1030,8 +1074,26 @@ footer #footer-icons a:hover{
   }
 
   footer #footer-icons a{
-    font-size: 29px;
+    font-size: 28px;
   }
 }
 
 
+@media screen and (max-width: 550px){
+  
+  .profile-container .intro-title h2{
+    font-size: 17.5px;
+  }
+  
+  .profile-container .intro-title h1{
+    font-size: 42px;
+  }
+  
+  .profile-container .intro-title a{
+    font-size: 17.5px;
+  }
+
+  .profile-container .intro-img img{
+    width: min(320px , 100%);
+  }
+}
