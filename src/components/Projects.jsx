@@ -1,10 +1,8 @@
 import '../styles/App.css';
-import { useState, useRef, useEffect } from "react";
-import CalculatorApp from "../images/CalculatorApp.png";
-import ZilloCine from '../images/ZilloCine.png';
-import LoginPage from "../images/login-page.png";
-import Aos from "aos";
-import 'aos/dist/aos.css';
+import { useState, useEffect } from "react";
+import calculator_img from "../images/calculator-img.png";
+import zillocine_img from '../images/zillocine.png';
+import login_page from "../images/login-page.png";
 import { SlArrowLeft, SlArrowRight } from "react-icons/sl";
 import { Swiper, SwiperSlide } from './Swiper.jsx';
 import { FaArrowUpRightFromSquare } from "react-icons/fa6";
@@ -12,7 +10,7 @@ import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 const myProjects = [{
   linkDeploy: "https://plataforma-filmes-three.vercel.app/",
   linkGit: "https://github.com/888888b/Plataforma_filmes",
-  img: ZilloCine,
+  img: zillocine_img,
   title: 'ZilloCine',
   tecnologies: [['React'], ['HTML'], ['CSS'],["JavaScript"], ["API"]],
   about: 'ZilloCine é uma plataforma de filmes que desenvolvi com o objetivo de oferecer aos usuários uma interface intuitiva e um design agradável. A plataforma conta com seis páginas principais: Home, Filmes, Séries, Conta, Player e Login. Utilizando uma API, o ZilloCine fornece todas as informações necessárias sobre os filmes disponíveis. Ao longo do desenvolvimento do projeto, tive a oportunidade de aprimorar minhas habilidades em diversas áreas, como design, lógica de programação, uso de APIs e desenvolvimento com React.',
@@ -21,7 +19,7 @@ const myProjects = [{
   },{
     linkDeploy: "https://login-page-f56l.vercel.app/",
     linkGit: "https://github.com/888888b/Login_page",
-    img: LoginPage,
+    img: login_page,
     title: "Pagina de Login",
     tecnologies: [['React'], ["HTML"], ['CSS'], ["JavaScript"]],
     about: 'Página de login desenvolvida com o objetivo de aprimorar e expandir meus conhecimentos na criação de aplicações que integram sistemas externos. O cadastro e login são feitos através do Firebase, e os dados do usuário podem ser vistos na página do perfil.',
@@ -30,7 +28,7 @@ const myProjects = [{
     }, {
     linkDeploy: "https://calculadora-react-rho-six.vercel.app/",
     linkGit: "https://github.com/888888b/Calculadora-react",
-    img: CalculatorApp,
+    img: calculator_img,
     title: "Calculadora",
     tecnologies: [["REACT"], ["HTML"], ['CSS'],["JavaScript"]],
     about: 'Calculadora web que pode realizar cálculos básicos como adição, subtração, divisão, multiplicação, raiz quadrada, potência, entre outros. O projeto também conta com um design agradável e responsivo.',
@@ -42,7 +40,6 @@ const myProjects = [{
 function Carrosel(){
   const [authorized, setAuthorized] = useState(false);
   const [swiperRef, setSwiperRef] = useState(undefined);
-  const projectsRef = useRef([]);
   const [pageWidth, setPageWidth] = useState(window.innerWidth);
 
   const breakpoints = {
@@ -56,56 +53,13 @@ function Carrosel(){
     }
   };
 
-  const equalizeHeight =  () => {
-
-    const getMaxHeight = (projectRef) => {
-      let height = 0;
-      const elements = projectRef.current;
-      if (elements && Array.isArray(elements)){
-        elements.forEach(element => {
-          if (element.offsetHeight > 0){
-            if (element.offsetHeight > height){
-              height = element.offsetHeight;
-            }
-          }
-        })
-
-      };
-
-      return height;
-    };
-
-    const equalize = () => {
-      const maxHeight = getMaxHeight(projectsRef);
-      if (maxHeight){
-        projectsRef.current.forEach(element => {
-          element.style.height = `${maxHeight}px`;
-        });
-      }
-    };
-
-    if (projectsRef.current.length && projectsRef.current[0].offsetHeight){
-      equalize();
-    }else{
-      setTimeout(equalizeHeight, 500);
-    }
-  };
-
   window.addEventListener('resize', () => {
-    if (window.innerWidth > pageWidth){
-      equalizeHeight();
-      setPageWidth(window.innerWidth);
-    }
+    setPageWidth(window.innerWidth);
   });
   
   useEffect( () => {
-    Aos.init({
-      duration: 300
-    });
-
     setAuthorized(true);
 
-    equalizeHeight();
   }, []);
   
   const handleSwiperControl = (command) => {
@@ -119,7 +73,7 @@ function Carrosel(){
   };
 
   return authorized ?(
-    <section className="projects-container" data-aos="zoom-in-up" data-aos-delay="300">
+    <section className="projects-container">
       <h1>Meus projetos</h1>
         <section className="swiper-container">
   
@@ -127,10 +81,10 @@ function Carrosel(){
           <button className="swiper-btns-control btn-right"><SlArrowRight onClick={() => {handleSwiperControl('next')}} className="arrows"/></button>
           
           <Swiper className='swiper' breakpoints={breakpoints} loop={true} swiperRef={setSwiperRef}>
-              {myProjects.map( (project, index) => (
-                <SwiperSlide>
+              {myProjects.map( (project) => (
+                <SwiperSlide className='swiper-slide'>
                   <section className='slides-container'>
-                    <div ref={(e) => {projectsRef.current[index] = e}} className="project-slide">
+                    <div className="project-slide">
                       <div className="project-img">
                         <img id={project.id} src={project.img}/>
                       </div>

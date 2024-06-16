@@ -235,8 +235,8 @@ header .header-links a:hover{
 
 .profile-container .about-me p{
   max-width: 95%;
-  font: 400 18px 'Noto Sans', helvetica, sans-serif;
-  color: var(--white);
+  font: 400 18.5px 'Noto Sans', helvetica, sans-serif;
+  color: var(--white-opacity-09);
   line-height: 170%;
 }
 
@@ -435,7 +435,6 @@ footer #footer-icons a:hover{
 
 .projects-container .slides-container{
   width: 70%;
-  margin: auto;
   position: relative;
   border-radius: 5px;
   border: 1pt solid var(--white-opacity-06);
@@ -449,6 +448,7 @@ footer #footer-icons a:hover{
 .projects-container .project-slide{
   width: 100%;
   overflow: hidden;
+  margin-bottom: 60px;
 }
 
 .projects-container .project-img{
@@ -485,8 +485,12 @@ footer #footer-icons a:hover{
 .projects-container .link-buttons{
   width: 100%;
   display: flex;
+  position: absolute;
+  bottom: 0;
+  left: 0;
   justify-content: space-between;
   box-sizing: border-box;
+  padding: 5px 10px;
 }
 
 .projects-container .slides-info h2{
@@ -541,8 +545,9 @@ footer #footer-icons a:hover{
 .projects-container .link-buttons a{
   padding: 6px 60px;
   color: var(--white);
-  border-radius: 4px;
-  font: 500 18px 'Poppins', 'Roboto', sans-serif;
+  border-radius: 3px;
+  text-transform: uppercase;
+  font: 600 16px 'Poppins', 'Roboto', sans-serif;
   cursor: pointer;
   background-color: var(--color-light-red);
   text-decoration: none;
@@ -550,7 +555,7 @@ footer #footer-icons a:hover{
 }
 
 .projects-container a .arrow-up-icon{
-  font-size: 15px;
+  font-size: 14px;
   position: absolute;
   right: 3px;
   top: 3px;

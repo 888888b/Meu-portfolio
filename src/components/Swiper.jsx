@@ -17,19 +17,12 @@ export function Swiper(props){
         Object.assign(swiperRef.current, params);
         setTimeout(() => {
             swiperRef.current.initialize();
+            swiperRef.current.style.display = 'flex';
+            swiperRef.current.style.alignItems = 'center';
         }, 1000);
     },[])
 
     useEffect(() => {
-        if (swiperRef.current && swiperRef.current.swiper) {
-            const swiperInstance = swiperRef.current.swiper;
-
-            const moveNext = () => {
-                swiperInstance.slideNext();
-            };
-
-        }
-
         const assingSwiperValue = () => {
             if (swiperRef.current && swiperRef.current.swiper) {
                 props.swiperRef(swiperRef.current.swiper);
@@ -51,9 +44,16 @@ export function Swiper(props){
 
 export function SwiperSlide(props){
     const {children, ...rest} = props;
+    const swiperSlideRef = useRef(null);
+
+    useEffect(() => {
+        swiperSlideRef.current.style.display = 'flex';
+        swiperSlideRef.current.style.justifyContent = 'center';
+        swiperSlideRef.current.style.height = 'auto';
+    },[]);
 
     return(
-        <swiper-slide {...rest}>
+        <swiper-slide {...rest} ref={swiperSlideRef}>
             {children}
         </swiper-slide>
     )
